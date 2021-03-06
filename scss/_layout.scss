@@ -37,4 +37,9 @@
     height: 100vh;
     background-color: $color-black;
     //insert background img
+
+    &__logo {
+        right: 0;
+        top: 20vh;
+    }
 }
