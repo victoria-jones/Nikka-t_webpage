@@ -1,0 +1,121 @@
+/** main nav **/ 
+
+.nav-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+
+    &__logo {
+        position: relative;
+        z-index: 1;
+        height: 12rem;
+        filter: drop-shadow(0 .3rem 0 $color-grey-dark)
+                drop-shadow(-.3rem 0 0 $color-grey-dark)
+                drop-shadow(.3rem 0 0 $color-grey-dark);
+                
+    }
+
+    &__bar {
+        width: 100%;
+        position: relative;
+        top: -9rem;
+        height: .8rem;
+        @include gold-reflected-gradient
+    }
+}
+
+/** logo **/ 
+
+.logo {
+    position: relative;
+    //background-color: grey;
+    width: 72rem;
+    height: 72rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+        width: 50rem;
+    }
+
+    &__description {
+        display: flex;
+        font-size: 5rem;
+        font-family: $font-display;
+        //font-weight: 300;
+        line-height: 1;
+        margin-right: 3rem;
+        @include text-stroke(.15rem, $color-black);
+
+        &--1 {
+            text-align: right;
+        }
+
+        &--bar {
+            background-color: white;
+            width: .5rem;
+            margin: 0 1rem;
+            border: .15rem solid $color-black;
+        }
+    }
+
+    &__img,
+    &__description {
+        z-index: 2;
+    }
+
+    &__glow {
+        position: absolute;
+        z-index: 1;
+        border-radius: 50%;
+        //background-color: $color-primary-gold;
+        width: 0;
+        height: 0;
+        box-shadow: 0 0 40rem 12rem $color-primary-gold;
+    }
+
+}
+
+/** img border boxes **/ 
+.borderbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 38rem;
+    height: 38rem;
+    transform: rotate(45deg);
+
+    &--1,
+    &--2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $color-primary-gold;
+
+        &::after {
+            content: "";
+            position: relative;
+            width: 98%;
+            height: 98%;
+            background-color: black;
+        }
+    }
+
+    &--1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    &--2 {
+        width: 94%;
+        height: 94%;
+    }
+}

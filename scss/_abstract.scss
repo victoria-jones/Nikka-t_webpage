@@ -1,0 +1,59 @@
+/** VARIABLES **/ 
+
+//colors 
+$color-primary-gold: #d0a348;
+$color-primary-gold-light: #fff7da;
+$color-primary-gold-medlight: #f2d978;
+$color-primary-gold-medium: #e4bf67;
+$color-primary-gold-dark: #8d6e30;
+
+$color-grey-dark: #1e1e1e;
+$color-black:       #000;
+$color-white:       #fff;
+
+//fonts
+$font-primary: 'Newsreader', serif;
+$font-display: 'Teko', sans-serif;
+
+//font sizing 
+$default-font-size: 1.6rem;
+$display-font-size: 3.8rem;
+
+/** MIXINS **/ 
+
+@mixin gold-reflected-gradient {
+    background-image: linear-gradient(to right, 
+            transparent 5%,
+            $color-primary-gold-dark 40%, 
+            $color-primary-gold, 
+            $color-primary-gold-medium, 
+            $color-primary-gold-medlight, 
+            $color-primary-gold-light,
+            $color-primary-gold-medlight,
+            $color-primary-gold-medium,
+            $color-primary-gold,
+            $color-primary-gold-dark 60%,
+            transparent 95%
+            );
+}
+
+@mixin gold-reflected-gradient-notransparency {
+    background-image: linear-gradient(to right, 
+            $color-primary-gold-dark 20%, 
+            $color-primary-gold, 
+            $color-primary-gold-medium, 
+            $color-primary-gold-medlight, 
+            $color-primary-gold-light,
+            $color-primary-gold-medlight,
+            $color-primary-gold-medium,
+            $color-primary-gold,
+            $color-primary-gold-dark 80%
+            );
+}
+
+@mixin text-stroke($stroke, $color) {
+    text-stroke: $stroke $color;
+    -webkit-text-stroke: $stroke $color;
+}
+
+/** FUNCTIONS **/ 

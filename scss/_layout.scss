@@ -1,0 +1,40 @@
+/** grids **/
+
+.container {
+    display: grid;
+    //10 columns for all pages
+    //grid-template-rows: 10rem repeat(4, maxcontent) 20rem; 
+    grid-template-rows: 10rem repeat(2, maxcontent) 20rem; 
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
+}
+
+.nav-main,
+.header,
+.main,
+.footer {
+    grid-column: 1 / -1;
+}
+
+.nav-main {
+    grid-row: 1;
+}
+
+.header {
+    grid-row: 1 / 2;
+}
+
+.main {
+    grid-row: 3;
+}
+
+.footer {
+    grid-row: 4;
+}
+
+/** header **/ 
+
+.header {
+    height: 100vh;
+    background-color: $color-black;
+    //insert background img
+}
