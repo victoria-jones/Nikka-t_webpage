@@ -40,12 +40,13 @@
     justify-content: center;
 
     &__img {
-        width: 50rem;
+        width: 55rem;
+        margin-top: 4rem;
     }
 
     &__description {
         display: flex;
-        font-size: 5rem;
+        font-size: 5.5rem;
         font-family: $font-display;
         //font-weight: 300;
         line-height: 1;
