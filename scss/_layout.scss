@@ -31,15 +31,124 @@
     grid-row: 4;
 }
 
+/** all sections **/ 
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.main-section {
+    &__container {
+        position: relative;
+        margin: 0 auto;
+        max-width: 140rem !important;
+        padding: 5rem 0;
+    }
+}
+
+.section {
+    &__header {
+        position: relative;
+        z-index: 1;
+    }
+}
+
 /** header **/ 
 
 .header {
-    height: 100vh;
+    height: 110vh;
     background-color: $color-black;
+    margin-bottom: -5vw;
     //insert background img
 
     &__logo {
         right: 0;
         top: 20vh;
     }
+}
+
+/** about **/ 
+
+.about {
+    //position: relative;
+    margin-bottom: 15rem;
+    &__content {
+        //position: absolute;
+        //top: 0;
+        display: flex;
+        & > * {
+            width: 100%;
+        }
+    }
+
+    &__copy {
+        margin-left: 5rem;
+        margin-top: 5rem;
+    }
+
+    &__img {
+        position: relative;
+        left: -15rem;
+        top: -5rem;
+    }
+}
+
+/** music **/ 
+
+.music {
+    background-color: $color-black;
+    padding-bottom: 20rem;
+
+    &__header {
+        //margin-left: 10rem;
+    }
+}
+
+.music__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+        width: 100%;
+    }
+
+    &--1 {
+        margin-right: 5rem;
+    }
+
+    &--2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &__img {
+            position: absolute;
+            z-index: 2;
+        }
+    }
+}
+
+/** stream **/ 
+
+.stream__header {
+    text-align: center;
+    margin-left: 50rem;
+    margin-top: 8rem;
+}
+
+.stream__img {
+    position: absolute;
+    z-index: 1;
+    margin-top: -18rem;
+}
+
+.stream-embed {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    width: 128rem;
+    height: 72rem;
+    background-color: $color-black;
 }

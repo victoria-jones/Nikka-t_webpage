@@ -39,8 +39,36 @@ body {
     color: $color-white;
 }
 
+.bold-copy {
+    color: $color-primary-gold;
+    font-family: $font-display;
+    font-size: $display-font-size-med;
+    line-height: 1.2;
+    &::after {
+        content: "";
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color-primary-gold;
+        transform: rotate(45deg);
+        margin: 2rem auto;
+    } 
+}
+
+.p__copy,
+.p__bold {
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+.header-2 {
+    text-transform: uppercase;
+    font-family: $font-display;
+    font-size: $display-font-size-large;
+    font-weight: $display-font-weight;
+}
 
 /** UTILITIES **/ 
-
 
 /** ANIMATIONS **/ 
