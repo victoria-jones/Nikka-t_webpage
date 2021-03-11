@@ -30,38 +30,24 @@
 /** logo **/ 
 
 .logo {
-    position: absolute;
-    //background-color: grey;
-    width: 72rem;
-    height: 72rem;
+    //position: absolute;
+    //width: 72rem;
+    //height: 72rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    &__img {
-        width: 55rem;
-        margin-top: 4rem;
-    }
-
     &__description {
         display: flex;
-        font-size: 5.5rem;
         font-family: $font-display;
-        //font-weight: 300;
         line-height: 1;
-        margin-right: 3rem;
-        @include text-stroke(.15rem, $color-black);
 
         &--1 {
             text-align: right;
         }
-
         &--bar {
-            background-color: white;
-            width: .5rem;
-            margin: 0 1rem;
-            border: .15rem solid $color-black;
+            background-color: $color-white;
         }
     }
 
@@ -74,15 +60,80 @@
         position: absolute;
         z-index: 1;
         border-radius: 50%;
-        //background-color: $color-primary-gold;
         width: 0;
         height: 0;
-        box-shadow: 0 0 40rem 12rem $color-primary-gold;
+    }
+
+    &__header {
+        position: absolute;
+        width: 72rem;
+        height: 72rem;
+        right: 0;
+        top: 20vh;
+
+        &__img {
+            width: 55rem;
+            margin-top: 4rem;
+        }
+    
+        &__description {
+            font-size: 5.5rem;
+            margin-right: 3rem;
+            @include text-stroke(.15rem, $color-black);
+    
+            &--bar {
+                width: .5rem;
+                margin: 0 1rem;
+                border: .15rem solid $color-black;
+            }
+        }
+    
+        &__glow {
+            box-shadow: 0 0 40rem 12rem $color-primary-gold;
+        }
+    }
+
+    &__footer {
+        width: 45rem;
+        height: 45rem;
+
+        &__img {
+            width: 28rem;
+            margin-top: 2rem;
+        }
+
+        &__description {
+            font-size: 2.5rem;
+            margin-right: 1.7rem;
+            line-height: 1;
+            @include text-stroke(.05rem, $color-black);
+
+            &--bar {
+                width: .2rem;
+                margin: 0 .5rem;
+            }
+        }
+
+        &__glow {
+            box-shadow: 0 0 10rem 5rem $color-primary-gold;
+        }
+
+        &__borderbox {
+            width: 19rem !important;
+            height: 19rem !important;
+
+            &--1,
+            &--2 {
+                &::after {
+                    background-color: $color-grey-dark !important;
+                }
+            }
+        }
     }
 
 }
 
-/** img border boxes **/ 
+/** border boxes **/ 
 .borderbox {
     display: flex;
     justify-content: center;
@@ -119,6 +170,7 @@
         width: 94%;
         height: 94%;
     }
+
 }
 
 //img borderbox
@@ -171,6 +223,12 @@
 .stream__img-borderbox {
     &--imgholder {
         background-color: $color-grey-dark;
+    }
+}
+
+.contact__img-borderbox {
+    &--2 {
+        background-color: $color-black;
     }
 }
 
@@ -288,7 +346,8 @@
         bottom: 1rem;
     }
 }
-.music__header {
+.music__header,
+.contact__header {
     &::after {   
         left: -79%;
     }
@@ -311,6 +370,12 @@
 
 .list {
     list-style-type: none;
+    transition: all .4s;
+
+    &__svg {
+        fill: url(#gradient-start) $color-primary-gold;   
+    }
+
     &__item {
        &:not(:last-child) {
            margin-bottom: .5rem;
@@ -318,37 +383,111 @@
     }
 
     &__link {
+        transition: all .4s;
+
+        @include gold-reflected-gradient-notransparency;
+        background-size: 100%;
+        background-position: 0 0;
+        text-decoration: none;
+        @include background-clip;
+
         &,
         &:visited,
         &:link {
             color: $color-primary-gold;
             font-family: $font-display;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background-position: 20rem 0; 
         }
     }
-}
 
-.list__bullet {
-    &__link {
-        font-size: $display-font-size-med;
+    &__bullet,
+    &__contact {
+        &__link {
+            font-size: $display-font-size-med;
+        }
+    }
+
+    &__bullet {
+
+        &__link::before {
+            content: "";
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: $color-primary-gold;
+            transform: rotate(45deg);
+            margin-right: 2rem;
+            margin-bottom: -.2rem;
+        }
+    
+        margin-bottom: 2rem;
+    }
+
+    &__socialmedia {
+        &__link {
+            font-size: $display-font-size;
+        }
+
+        &__svg {
+            margin-right: 1.5rem;
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: -1rem;
+
+            &--soundcloud {
+                width: 6rem;
+                height: 6rem;
+            }
+            &--twitch {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    &__nav {
+        width: 100%;
         display: flex;
-        align-items: center;
+        justify-content: center;
+        
+        &__item {
+            &:not(:last-child) {
+                margin-right: 5rem;
+            }
+        }
+
+        &__svg {
+            transition: all .3s;
+            width: 2.8rem;
+            height: 2.8rem;
+
+            &:hover {
+                transform: rotate(-10deg) scale(1.2);
+            }
+        }
     }
 
-    &__link::before {
-        content: "";
-        display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
-        background-color: $color-primary-gold;
-        transform: rotate(45deg);
-        margin-right: 2rem;
+    &__nav-main {
+        &__svg {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 
-    margin-bottom: 2rem;
+    &__contact {
+        &__svg {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 1rem;
+            margin-bottom: -.5rem;
+        }
+    }
+
 }
 
-.list__socialmedia {
-    &__link {
-        font-size: $display-font-size;
-    }
-}
+
+

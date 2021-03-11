@@ -61,4 +61,13 @@ $display-font-weight: 300;
     -webkit-text-stroke: $stroke $color;
 }
 
+@mixin background-clip {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
 /** FUNCTIONS **/ 

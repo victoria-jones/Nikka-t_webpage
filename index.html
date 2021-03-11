@@ -19,41 +19,77 @@
     </head>
 
     <body class="container">
+        <svg>
+            <linearGradient id="gradient-start">
+                <stop offset="0%" stop-color="#f2d978" />
+                <stop offset="20%" stop-color="#fff7da" />
+                <stop offset="50%" stop-color="#f2d978" />
+                <stop offset="70%" stop-color="#e4bf67" />
+                <stop offset="90%" stop-color="#d0a348" />
+                <stop offset="100%" stop-color="#8d6e30" />
+              </linearGradient>
+        </svg>
 
         <div class="nav-main">
             <div class="nav-main__socialmedia socialmedia">
-                social media links
+                <ul class="list list__nav list__nav-main">
+                    <li class="list__item list__nav__item list__nav-main__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg list__nav-main__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-facebook"></use>
+                        </svg>
+                    </a></li>
+                    <li class="list__item list__nav__item list__nav-main__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg list__nav-main__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-instagram"></use>
+                        </svg>
+                    </a></li>
+                    <li class="list__item list__nav__item list__nav-main__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg list__nav-main__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-twitter"></use>
+                        </svg>
+                    </a></li>
+                    <li class="list__item list__nav__item list__nav-main__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg list__nav-main__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-youtube"></use>
+                        </svg>
+                    </a></li>
+                    <li class="list__item list__nav__item list__nav-main__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg list__nav-main__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-twitch"></use>
+                        </svg>
+                    </a></li>
+                </ul>
             </div>
             <img src="img/nikka_t_logo_01.png" alt="Nikka T logo" class="nav-main__logo" />
             <span class="nav-main__bar">&nbsp;</span>
         </div>
 
         <header class="header">
-            <div class="header__logo logo">
-                <img src="img/nikka_t_logo_02.png" class="logo__img" />
-                <div class="logo__description">
+            <div class="logo__header logo">
+                <img src="img/nikka_t_logo_02.png" class="logo__img logo__header__img" />
+                <div class="logo__description logo__header__description">
 
-                    <div class="logo__description--1">
-                        <div class="logo__description--text">Dj</div>
-                        <div class="logo__description--text">Educator</div>
-                        <div class="logo__description--text">Extract Artist</div>
+                    <div class="logo__description--1 logo__header__description--1">
+                        <div class="logo__description--text logo__headser__description--text">Dj</div>
+                        <div class="logo__description--text logo__headser__description--text">Educator</div>
+                        <div class="logo__description--text logo__headser__description--text">Extract Artist</div>
                     </div>
 
-                    <div class="logo__description--bar"></div>
+                    <div class="logo__description--bar logo__header__description--bar"></div>
 
-                    <div class="logo__description--2">
-                        <div class="logo__description--text">Host</div>
-                        <div class="logo__description--text">Speaker</div>
-                        <div class="logo__description--text">Consultant</div>
+                    <div class="logo__description--2 logo__header__description--2">
+                        <div class="logo__description--text logo__headesr__description--text">Host</div>
+                        <div class="logo__description--text logo__headesr__description--text">Speaker</div>
+                        <div class="logo__description--text logo__headesr__description--text">Consultant</div>
                     </div>
 
                 </div>
 
-                <div class="logo__glow">&nbsp;</div>
+                <div class="logo__glow logo__header__glow">&nbsp;</div>
 
-                <div class="borderbox logo__borderbox">
-                    <div class="borderbox--1"></div>
-                    <div class="borderbox--2"></div>
+                <div class="borderbox logo__borderbox logo__header__borderbox">
+                    <div class="borderbox--1 logo__header__borderbox--1"></div>
+                    <div class="borderbox--2 logo__header__borderbox--2"></div>
                 </div>
             </div>
         </header>
@@ -129,10 +165,16 @@
         
                             <ul class="list list__socialmedia">
                                 <li class="list__item list__socialmedia__item"><a href="#" class="list__link list__socialmedia__link">
-                                    (social media svg icon) DjNikkaT
+                                    <svg class="list__svg list__socialmedia__svg list__socialmedia__svg--soundcloud">
+                                        <use xlink:href="img/icon-sprites.svg#icon-soundcloud"></use>
+                                    </svg> 
+                                    DjNikkaT
                                 </a></li>
                                 <li class="list__item list__socialmedia__item"><a href="#" class="list__link list__socialmedia__link">
-                                    (social media svg icon) Nikka__T
+                                    <svg class="list__svg list__socialmedia__svg list__socialmedia__svg--twitch">
+                                        <use xlink:href="img/icon-sprites.svg#icon-twitch"></use>
+                                    </svg> 
+                                    Nikka__T
                                 </a></li>
                             </ul>
                         </div>
@@ -175,6 +217,21 @@
                         <div class="stream-embed">
                             (stream embed here)
                         </div>
+
+                        <ul class="list list__socialmedia stream__list">
+                            <li class="list__item list__socialmedia__item"><a href="#" class="list__link list__socialmedia__link">
+                                <svg class="list__svg list__socialmedia__svg">
+                                    <use xlink:href="img/icon-sprites.svg#icon-twitch"></use>
+                                </svg>
+                                Nikka__T
+                            </a></li>
+                            <li class="list__item list__socialmedia__item"><a href="#" class="list__link list__socialmedia__link">
+                                <svg class="list__svg list__socialmedia__svg">
+                                    <use xlink:href="img/icon-sprites.svg#icon-youtube"></use>
+                                </svg>
+                                SelectaNikkaT
+                            </a></li>
+                        </ul>
                     </div>
                     
                 </div>          
@@ -182,7 +239,45 @@
 
             <section class="contact main-section">
                 <div class="main-section__container">
-                    contact
+                    <h2 class="section__header contact__header header-2">Contact</h2>
+                    <div class="contact__content">
+
+                        <ul class="list list__contact">
+                            <li class="list__item list__contact__item"><a href="#" class="list__link list__contact__link">
+                                <svg class="list__svg list__contact__svg">
+                                    <use xlink:href="img/icon-sprites.svg#icon-facebook"></use>
+                                </svg>
+                                @OfficialNikkaTpage
+                            </a></li>
+                            <li class="list__item list__contact__item"><a href="#" class="list__link list__contact__link">
+                                <svg class="list__svg list__contact__svg">
+                                    <use xlink:href="img/icon-sprites.svg#icon-instagram"></use>
+                                </svg>
+                                @Nikka__T
+                            </a></li>
+                            <li class="list__item list__contact__item"><a href="#" class="list__link list__contact__link">
+                                <svg class="list__svg list__contact__svg">
+                                    <use xlink:href="img/icon-sprites.svg#icon-twitter"></use>
+                                </svg>
+                                @ExtractArtist
+                            </a></li>
+                            <li class="list__item list__contact__item"><a href="#" class="list__link list__contact__link">
+                                <svg class="list__svg list__contact__svg">
+                                    <use xlink:href="img/icon-sprites.svg#icon-email"></use>
+                                </svg>
+                                @DjNikkaT@gmail.com
+                            </a></li>
+                        </ul>
+
+                        <div class="contact__img">
+                            <div class="img-borderbox contact__img-borderbox">
+                                <div class="img-borderbox--1 contact__img-borderbox--1"></div>
+                                <div class="img-borderbox--2 contact__img-borderbox--2"></div>
+                                <div class="img-borderbox--3 contact__img-borderbox--3"><div class="img-borderbox--imgholder contact__img-borderbox--imgholder">&nbsp;</div></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
@@ -193,8 +288,62 @@
                 affiliates
             </section>
 
-            <section class="footer-nav">
-                footer stuff
+            <section class="footer__nav">
+                <ul class="list list__nav">
+                    <li class="list__item list__nav__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-facebook"></use>
+                        </svg>
+                    </a></li>
+                    <li class="list__item list__nav__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-instagram"></use>
+                        </svg>
+                    </a></li>
+                    <li class="list__item list__nav__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-twitter"></use>
+                        </svg>
+                    </a></li>
+                    <li class="list__item list__nav__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-youtube"></use>
+                        </svg>
+                    </a></li>
+                    <li class="list__item list__nav__item"><a href="#" class="list__link list__nav__link">
+                        <svg class="list__svg list__nav__svg">
+                            <use xlink:href="img/icon-sprites.svg#icon-twitch"></use>
+                        </svg>
+                    </a></li>
+                </ul>
+
+                <div class="logo__footer logo">
+                    <img src="img/nikka_t_logo_02.png" class="logo__img logo__footer__img" />
+                    <div class="logo__description logo__footer__description">
+    
+                        <div class="logo__description--1 logo__footer__description--1">
+                            <div class="logo__description--text logo__footer__description--text">Dj</div>
+                            <div class="logo__description--text logo__footer__description--text">Educator</div>
+                            <div class="logo__description--text logo__footer__description--text">Extract Artist</div>
+                        </div>
+    
+                        <div class="logo__description--bar logo__footer__description--bar"></div>
+    
+                        <div class="logo__description--2 logo__footer__description--2">
+                            <div class="logo__description--text logo__footer__description--text">Host</div>
+                            <div class="logo__description--text logo__footer__description--text">Speaker</div>
+                            <div class="logo__description--text logo__footer__description--text">Consultant</div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="logo__glow logo__footer__glow">&nbsp;</div>
+    
+                    <div class="borderbox logo__borderbox logo__footer__borderbox">
+                        <div class="borderbox--1 logo__footer__borderbox--1"></div>
+                        <div class="borderbox--2 logo__footer__borderbox--2"></div>
+                    </div>
+                </div>
             </section>
         </footer>
     </body>
