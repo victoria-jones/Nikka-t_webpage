@@ -59,7 +59,16 @@
     height: 110vh;
     background-color: $color-black;
     margin-bottom: -5vw;
-    //insert background img
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-image: url(../img/nikka-t_02.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: .4;
+    }
 
     
 }
@@ -88,6 +97,30 @@
         left: -15rem;
         top: -5rem;
     }
+
+    @include respond(tab-land) {
+        &__content {
+            flex-direction: column;
+        }
+
+        &__copy {
+            order: -1;
+            margin: 0  auto;
+            position: relative;
+            margin-bottom: 5rem;
+            z-index: 2;
+        }
+
+        &__img {
+            position: static;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+            transform: scale(.8);
+        }
+    }
 }
 
 /** music **/ 
@@ -95,30 +128,59 @@
 .music {
     background-color: $color-black;
     padding-bottom: 20rem;
-}
 
-.music__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & > * {
-        width: 100%;
-    }
-
-    &--1 {
-        margin-right: 5rem;
-    }
-
-    &--2 {
+    &__content {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
 
-        &__img {
-            position: absolute;
-            z-index: 2;
+        & > * {
+            width: 100%;
+        }
+
+        &--1 {
+            margin-right: 5rem;
+        }
+
+        &--2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            &__img {
+                position: absolute;
+                z-index: 2;
+            }
+        }
+    }
+
+    @include respond(tab-port) {
+        &__header {
+            margin-top: 5rem;
+            margin-bottom: -2rem;
+        }
+
+        &__content {
+            flex-wrap: wrap;
+
+            &--1 {
+                margin: 0 0 30rem 0;
+            }
+
+            &--2 {
+                z-index: 1;
+            }
+        }
+
+        &__list {
+
+            &__bullet,
+            &__socialmedia {
+               width: 75%;
+               margin-left: auto;
+               margin-right: auto;
+            }
         }
     }
 }
@@ -153,6 +215,22 @@
         margin-left: 50rem;
         margin-top: 8rem;
     }
+
+    @include respond(tab-port) {
+
+        &__img {
+            transform: scale(.7);
+            left: -15rem;
+            margin-top: -15rem;
+        }
+
+        &__header {
+            margin-left: 0;
+            z-index: 2;
+            margin-top: 15rem;
+            margin-bottom: -5rem;
+        }
+    }
     
 }
 
@@ -172,7 +250,7 @@
 /** contact **/ 
 .contact {
     background-color: $color-black;
-    padding: 13rem 0;
+    padding: 5rem 0;
     margin-bottom: 10rem;
 
     &__content {
@@ -184,25 +262,59 @@
     }
 
     &__img {
-        margin-top: -23rem;
+        margin-top: -20rem;
+
+        @include respond(tab-land) {
+            transform: scale(.8);
+            margin-top: -11rem;
+            margin-right: -10rem;
+        }
     }
 
     &__img-borderbox {
         width: 50rem;
         height: 50rem;
+
+        &--imgholder {
+            background-image: url(../img/nikka-t_01.jpg);
+            opacity: .8;
+        }
     }
 }
 
 /** footer **/ 
 .footer {
-    &__nav {
-        
+    max-width: 140rem;
+    margin: 0 auto;
+
+    &__affiliates {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 5rem 0;
+        &__img {
+            max-width: 15rem;
+            opacity: .4;
+            align-self: center;
+            margin: 2rem 2.5rem;
+        }
     }
 }
 
 .logo {
     &__footer {
+        position: relative;
+        z-index: -1;
         margin: 0 auto;
         margin-top: -5rem;
     }
+}
+
+
+
+/** svg gradient holder **/ 
+
+.svg-gradient {
+    width: 0;
+    height: 0;
 }

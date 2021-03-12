@@ -30,9 +30,8 @@
 /** logo **/ 
 
 .logo {
-    //position: absolute;
-    //width: 72rem;
-    //height: 72rem;
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,6 +89,31 @@
     
         &__glow {
             box-shadow: 0 0 40rem 12rem $color-primary-gold;
+        }
+
+        @include respond(tab-land) {
+            width: 60rem;
+            height: 60rem;
+
+            &__img {
+                width: 43rem;
+            }
+
+            &__description {
+                font-size: 4.5rem;
+            }
+
+            &__borderbox {
+                width: 30rem !important;
+                height: 30rem !important;
+            }
+        }
+
+        @include respond(tab-port) {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            top: 50vh;
         }
     }
 
@@ -183,6 +207,10 @@
     width: 60rem;
     height: 60rem;
     transform: rotate(45deg);
+
+    @include respond(tab-land) {
+        position: static;
+    }
 
     &--1,
     &--2,
@@ -479,6 +507,10 @@
     }
 
     &__contact {
+        &__link {
+            font-size: 3rem;
+        }
+
         &__svg {
             width: 2.5rem;
             height: 2.5rem;
