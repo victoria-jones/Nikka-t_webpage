@@ -94,6 +94,7 @@
         @include respond(tab-land) {
             width: 60rem;
             height: 60rem;
+            top: 50vh;
 
             &__img {
                 width: 43rem;
@@ -115,6 +116,7 @@
             justify-content: center;
             top: 50vh;
         }
+
     }
 
     &__footer {
@@ -151,6 +153,39 @@
                 &::after {
                     background-color: $color-grey-dark !important;
                 }
+            }
+        }
+    }
+
+    &__footer, 
+    &__header {
+        @include respond(phone-med) {
+            width: 100%;
+            height: 45rem;
+            
+
+            &__img {
+                width: 25rem;
+            }
+
+            &__description {
+                font-size: 3.2rem;
+            }
+
+            &__borderbox {
+                width: 19.5rem !important;
+                height: 19.5rem !important;
+            }
+        }
+
+        @include respond(phone-small) {
+            &__description {
+                font-size: 2.9rem;
+                margin-right: 1.7rem;
+            }
+            &__borderbox {
+                width: 17rem !important;
+                height: 17rem !important;
             }
         }
     }
@@ -246,6 +281,7 @@
         height: 145%;
         transform: rotate(-45deg);
     }
+
 }
 
 .stream__img-borderbox {
@@ -365,13 +401,16 @@
         content: "";
         position: absolute;
         bottom: 0;
-        //left: -25%;
         height: .4rem;
         width: 100%;
         background-color: $color-white;
     }
     &::after {
         bottom: 1rem;
+    }
+
+    @include respond (phone) {
+        margin-left: 2rem;
     }
 }
 .music__header,
@@ -384,6 +423,23 @@
         left: -82%;
     }
 }
+
+.music__header,
+.contact__header,
+.stream__header {
+    @include respond(phone) {
+        line-height: 1;
+        padding-bottom: 2rem;
+
+        &::after {
+            left: -17%;
+        }   
+        &::before {
+            left: -20%;
+        }
+    }
+}
+
 .stream__header {
     &::after { 
         left: -17%;
@@ -391,6 +447,10 @@
 
     &::before {
         left: -20%;
+    }
+
+    @include respond (phone) {
+        margin-left: 2rem !important;
     }
 }
 
@@ -475,6 +535,14 @@
                 height: 4rem;
             }
         }
+
+        @include respond(phone-small) {
+            &__stream {
+                &__link {
+                    font-size: 3.5rem;
+                }
+            }
+        }
     }
 
     &__nav {
@@ -497,6 +565,22 @@
                 transform: rotate(-10deg) scale(1.2);
             }
         }
+
+        @include respond(phone-med) {
+            &__item{
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                }
+            }
+        }
+
+        &__footer {
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 2.3rem;
+                }
+            }
+        }
     }
 
     &__nav-main {
@@ -516,6 +600,12 @@
             height: 2.5rem;
             margin-right: 1rem;
             margin-bottom: -.5rem;
+        }
+
+        @include respond (phone-med) {
+            &__link {
+                font-size: 2rem;
+            }
         }
     }
 

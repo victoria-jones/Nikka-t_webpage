@@ -29,6 +29,9 @@ body {
     box-sizing: border-box;
     //no longer browser reset
     background-color: $color-grey-dark;
+
+    //not part of browser reset
+    overflow-x: hidden;
 }
 
 /** TYPOGRAPHY **/
