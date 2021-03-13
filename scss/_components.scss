@@ -119,6 +119,12 @@
 
     }
 
+    &__music {
+        &__glow {
+            box-shadow: 0 0 40rem 12rem $color-primary-gold; 
+        }
+    }
+
     &__footer {
         width: 45rem;
         height: 45rem;

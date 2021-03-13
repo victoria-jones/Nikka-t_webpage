@@ -32,11 +32,17 @@
 }
 
 /** all sections **/ 
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 .main {
     position: relative;
     display: flex;
     flex-direction: column;
 }
+
 .main-section {
     &__container {
         position: relative;
@@ -73,6 +79,15 @@
         background-repeat: no-repeat;
         background-size: cover;
         opacity: .4;
+
+        @include respond(tab-land) {
+            background-image: url(../img/nikka-t_02_med.jpg);
+            background-position: center;
+        }
+
+        @include respond(phone) {
+            background-image: url(../img/nikka-t_02_small.jpg);
+        }
     }   
 }
 
@@ -99,6 +114,16 @@
         position: relative;
         left: -15rem;
         top: -5rem;
+    }
+
+    &__img-borderbox {
+        &--imgholder {
+            background-image: url(../img/nikka-t_03.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+           opacity: .8;
+        }
     }
 
     @include respond(tab-land) {
@@ -366,11 +391,11 @@
     background-color: $color-black;
     padding: 5rem 0;
     margin-bottom: 10rem;
-    //overflow-x: hidden;
-    
+
     &__content {
         display: flex;
         justify-content: center;
+        
         & > * {
             width: 100%;
         }
@@ -386,6 +411,9 @@
 
         &--imgholder {
             background-image: url(../img/nikka-t_01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             opacity: .8;
         }
     }

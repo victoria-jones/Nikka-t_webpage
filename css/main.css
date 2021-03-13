@@ -61,7 +61,6 @@ html {
 body {
   box-sizing: border-box;
   background-color: #1e1e1e;
-  overflow-x: hidden;
 }
 
 /** TYPOGRAPHY **/
@@ -209,6 +208,9 @@ body {
     justify-content: center;
     top: 50vh;
   }
+}
+.logo__music__glow {
+  box-shadow: 0 0 40rem 12rem #d0a348;
 }
 .logo__footer {
   width: 45rem;
@@ -628,6 +630,11 @@ body {
 }
 
 /** all sections **/
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .main {
   position: relative;
   display: flex;
@@ -668,6 +675,17 @@ body {
   background-size: cover;
   opacity: 0.4;
 }
+@media only screen and (max-width: 75em) {
+  .header::after {
+    background-image: url(../img/nikka-t_02_med.jpg);
+    background-position: center;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header::after {
+    background-image: url(../img/nikka-t_02_small.jpg);
+  }
+}
 
 /** about **/
 .about {
@@ -687,6 +705,13 @@ body {
   position: relative;
   left: -15rem;
   top: -5rem;
+}
+.about__img-borderbox--imgholder {
+  background-image: url(../img/nikka-t_03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
 }
 @media only screen and (max-width: 75em) {
   .about {
@@ -917,6 +942,9 @@ body {
 }
 .contact__img-borderbox--imgholder {
   background-image: url(../img/nikka-t_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   opacity: 0.8;
 }
 @media only screen and (max-width: 75em) {
