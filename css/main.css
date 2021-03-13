@@ -734,14 +734,23 @@ body {
     display: flex;
     justify-content: center;
     z-index: 1;
-    transform: scale(0.8);
+    margin-top: 8rem;
   }
   .about__img-borderbox {
     width: 45rem;
     height: 45rem;
   }
 }
+@media only screen and (max-width: 56.25em) {
+  .about__img-borderbox {
+    width: 40rem;
+    height: 40rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
+  .about__img {
+    margin-top: 4rem;
+  }
   .about__img-borderbox {
     width: 30rem;
     height: 30rem;
@@ -754,6 +763,12 @@ body {
   .about__img-borderbox {
     width: 22rem;
     height: 22rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .about__img-borderbox {
+    width: 17rem;
+    height: 17rem;
   }
 }
 
