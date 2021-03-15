@@ -121,6 +121,11 @@ body {
   height: 12rem;
   filter: drop-shadow(0 0.3rem 0 #1e1e1e) drop-shadow(-0.3rem 0 0 #1e1e1e) drop-shadow(0.3rem 0 0 #1e1e1e);
 }
+@media only screen and (max-width: 37.5em) {
+  .nav-main__logo {
+    transform: scale(0.7) translateY(-2rem);
+  }
+}
 .nav-main__bar {
   width: 100%;
   position: relative;

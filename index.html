@@ -215,7 +215,13 @@
                         </div>
     
                         <div class="stream-embed">
-                            (stream embed here)
+                            <iframe
+                                id="twitch-embed"
+                                src="https://player.twitch.tv/?channel=dallas&parent=streamernews.example.com&muted=true"
+                                height="720"
+                                width="1280"
+                                allowfullscreen="true">
+                            </iframe>
                         </div>
 
                         <ul class="list list__socialmedia stream__list list__socialmedia__stream">
@@ -295,7 +301,10 @@
                 <img src="img/hightimes.jpg" alt="hightimes" class="footer__affiliates__img footer__affiliates__img--8" />
                 <img src="img/reggae-on-the-rocks.png" alt="reggase on the rocks" class="footer__affiliates__img footer__affiliates__img--9" />
                 <img src="img/sensi-magazine.png" alt="sensi magazine" class="footer__affiliates__img footer__affiliates__img--10" />
-                <img src="img/wutang.png" alt="wu-tang clan" class="footer__affiliates__img footer__affiliates__img--11" />    
+                <img src="img/wutang.png" alt="wu-tang clan" class="footer__affiliates__img footer__affiliates__img--11" />
+                <svg class="footer__affiliates__img footer__affiliates__img--12">
+                    <use xlink:href="img/icon-sprites.svg#icon-twitch"></use>
+                </svg>    
             </section>
 
             <section class="footer__nav">
