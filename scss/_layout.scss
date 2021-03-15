@@ -391,7 +391,10 @@ body {
 .stream-embed {
     position: relative;
     z-index: 2;
-    width: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*width: 90%;
     max-width: 128rem;
     background-color: $color-black;
     &::after {
@@ -402,6 +405,32 @@ body {
 
     @include respond(tab-port) {
         width: 100%;
+    }*/
+}
+
+#twitch-embed {
+    @include respond(med-desktop) {
+        width: 85.4rem;
+        height: 48rem;
+    }
+
+    @include respond(tab-port) {
+        width: 64rem;
+        height: 36rem;
+    }
+
+    @include respond(phone) {
+        width: 42.6rem;
+        height: 24rem;
+    }
+
+    @include respond(phone-med) {
+        width: 30rem;
+        height: 16.9rem;
+    }
+    @include respond(phone-small) {
+        width: 27rem;
+        height: 15.2rem;
     }
 }
 
