@@ -394,18 +394,6 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    /*width: 90%;
-    max-width: 128rem;
-    background-color: $color-black;
-    &::after {
-        content: "";
-        display: block;
-        padding-top: 50.625%;
-    }
-
-    @include respond(tab-port) {
-        width: 100%;
-    }*/
 }
 
 #twitch-embed {
