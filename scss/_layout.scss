@@ -2,8 +2,6 @@
 
 .container {
     display: grid;
-    //10 columns for all pages
-    //grid-template-rows: 10rem repeat(4, maxcontent) 20rem; 
     grid-template-rows: 10rem repeat(2, maxcontent) 20rem; 
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
 }
@@ -70,6 +68,7 @@ body {
     height: 110vh;
     background-color: $color-black;
     margin-bottom: -5vw;
+    min-height: 72rem;
     &::after {
         content: "";
         width: 100%;
@@ -88,17 +87,24 @@ body {
         @include respond(phone) {
             background-image: url(../img/nikka-t_02_small.jpg);
         }
-    }   
+    }  
+    
+    @include respond(tab-land) {
+        min-height: 90rem;
+    }
+    @include respond(phone) {
+        min-height: initial;
+    }
+    @include respond(phone-med-h) {
+        min-height: 90rem;
+    }
 }
 
 /** about **/ 
 
 .about {
-    //position: relative;
     margin-bottom: 15rem;
     &__content {
-        //position: absolute;
-        //top: 0;
         display: flex;
         & > * {
             width: 100%;
@@ -127,7 +133,7 @@ body {
     }
 
     @include respond(tab-land) {
-        margin-bottom: 6rem;
+        margin-bottom: 10rem;
 
         &__content {
             flex-direction: column;
@@ -149,7 +155,6 @@ body {
             justify-content: center;
             z-index: 1;
             margin-top: 8rem;
-            //transform: scale(.8);
         }
 
         &__img-borderbox {
@@ -162,7 +167,6 @@ body {
         &__img-borderbox {
             width: 40rem;
             height: 40rem;
-            //margin: 0 auto;
         }
     }
 

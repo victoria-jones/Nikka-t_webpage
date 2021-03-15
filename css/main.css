@@ -670,6 +670,7 @@ body {
   height: 110vh;
   background-color: #000;
   margin-bottom: -5vw;
+  min-height: 72rem;
 }
 .header::after {
   content: "";
@@ -690,6 +691,21 @@ body {
 @media only screen and (max-width: 37.5em) {
   .header::after {
     background-image: url(../img/nikka-t_02_small.jpg);
+  }
+}
+@media only screen and (max-width: 75em) {
+  .header {
+    min-height: 90rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    min-height: initial;
+  }
+}
+@media only screen and (max-height: 46.25em) {
+  .header {
+    min-height: 90rem;
   }
 }
 
@@ -721,7 +737,7 @@ body {
 }
 @media only screen and (max-width: 75em) {
   .about {
-    margin-bottom: 6rem;
+    margin-bottom: 10rem;
   }
   .about__content {
     flex-direction: column;
