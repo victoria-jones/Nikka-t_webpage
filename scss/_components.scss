@@ -424,7 +424,8 @@
     }
 }
 .music__header,
-.contact__header {
+.contact__header,
+.featured__header {
     &::after {   
         left: -79%;
     }
@@ -436,7 +437,8 @@
 
 .music__header,
 .contact__header,
-.stream__header {
+.stream__header,
+.featured__header {
     @include respond(phone) {
         line-height: 1;
         padding-bottom: 2rem;
@@ -523,6 +525,10 @@
         }
     
         margin-bottom: 2rem;
+
+        &__featured {
+            margin-top: -5rem;
+        }
     }
 
     &__socialmedia {

@@ -452,29 +452,34 @@ body {
 }
 
 .music__header::after,
-.contact__header::after {
+.contact__header::after,
+.featured__header::after {
   left: -79%;
 }
 .music__header::before,
-.contact__header::before {
+.contact__header::before,
+.featured__header::before {
   left: -82%;
 }
 
 @media only screen and (max-width: 37.5em) {
   .music__header,
 .contact__header,
-.stream__header {
+.stream__header,
+.featured__header {
     line-height: 1;
     padding-bottom: 2rem;
   }
   .music__header::after,
 .contact__header::after,
-.stream__header::after {
+.stream__header::after,
+.featured__header::after {
     left: -17%;
   }
   .music__header::before,
 .contact__header::before,
-.stream__header::before {
+.stream__header::before,
+.featured__header::before {
     left: -20%;
   }
 }
@@ -538,6 +543,9 @@ body {
   transform: rotate(45deg);
   margin-right: 2rem;
   margin-bottom: -0.2rem;
+}
+.list__bullet__featured {
+  margin-top: -5rem;
 }
 .list__socialmedia__link {
   font-size: 3.8rem;
@@ -608,7 +616,6 @@ body {
 .container {
   display: grid;
   grid-template-rows: 10rem repeat(2, maxcontent) 20rem;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
@@ -734,6 +741,9 @@ body {
   background-size: cover;
   background-position: center;
   opacity: 0.8;
+}
+.about__featured-in {
+  margin-top: 18rem;
 }
 @media only screen and (max-width: 75em) {
   .about {
