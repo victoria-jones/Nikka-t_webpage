@@ -2,10 +2,11 @@
 
 .container {
     display: grid;
-    grid-template-rows: 10rem repeat(2, maxcontent) 20rem; 
+    grid-template-rows: 10rem repeat(2, maxcontent) 20rem;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
 }
 
+.banner,
 .nav-main,
 .header,
 .main,
@@ -29,7 +30,7 @@
     grid-row: 4;
 }
 
-/** all sections **/ 
+/** all sections **/
 body {
     overflow-x: hidden;
     width: 100%;
@@ -62,7 +63,7 @@ body {
     }
 }
 
-/** header **/ 
+/** header **/
 
 .header {
     height: 110vh;
@@ -87,8 +88,8 @@ body {
         @include respond(phone) {
             background-image: url(../img/nikka-t_02_small.jpg);
         }
-    }  
-    
+    }
+
     @include respond(tab-land) {
         min-height: 90rem;
     }
@@ -100,7 +101,7 @@ body {
     }
 }
 
-/** about **/ 
+/** about **/
 
 .about {
     margin-bottom: 15rem;
@@ -203,7 +204,7 @@ body {
     }
 }
 
-/** music **/ 
+/** music **/
 
 .music {
     background-color: $color-black;
@@ -283,7 +284,7 @@ body {
             }
         }
 
-        &__list { 
+        &__list {
             &__bullet,
             &__socialmedia {
                 width: 100%;
@@ -331,7 +332,7 @@ body {
     }
 }
 
-/** stream **/ 
+/** stream **/
 
 .stream {
     margin-bottom: 10rem;
@@ -393,7 +394,7 @@ body {
             height: 30rem;
         }
     }
-    
+
 }
 
 .stream-embed {
@@ -430,7 +431,7 @@ body {
     }
 }
 
-/** contact **/ 
+/** contact **/
 .contact {
     background-color: $color-black;
     padding: 5rem 0;
@@ -439,7 +440,7 @@ body {
     &__content {
         display: flex;
         justify-content: center;
-        
+
         & > * {
             width: 100%;
         }
@@ -483,7 +484,7 @@ body {
             margin-top: 12rem;
             margin-right: auto;
             margin-left: auto;
-            
+
         }
 
         &__img-borderbox {
@@ -529,7 +530,7 @@ body {
     }
 }
 
-/** footer **/ 
+/** footer **/
 .footer {
     max-width: 140rem;
     margin: 0 auto;
@@ -575,7 +576,7 @@ body {
 
 
 
-/** svg gradient holder **/ 
+/** svg gradient holder **/
 
 .svg-gradient {
     width: 0;

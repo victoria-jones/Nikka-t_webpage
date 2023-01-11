@@ -1,12 +1,13 @@
 /**************************
 
-*insert nikka t domain name here*
+*www.nicktanem.com*
+*www.djnikkat.com * <-- redirects to the above web address
 
 Author: Victoria Jones
 victoria-jones-design.com
 victoria.j.art@gmail.com
 
-Date Last Modified: 3/5/2021
+Date Last Modified: 1/11/2023
 
 **************************/
 /**************************/
@@ -180,6 +181,10 @@ body {
 .banner__content--right {
   flex-grow: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 .banner__CTA--p--01 {
   font-family: "Teko", sans-serif;
@@ -200,11 +205,6 @@ body {
 }
 .banner__button {
   margin-top: 1rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .banner__button {
-    margin-bottom: 1rem;
-  }
 }
 .banner__background {
   position: absolute;
@@ -732,7 +732,16 @@ body {
 
 /** button **/
 .button {
-  background-color: #d0a348;
+  position: relative;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 5rem;
+  background-image: linear-gradient(to right, #8d6e30 20%, #d0a348, #e4bf67, #f2d978, #fff7da, #f2d978, #e4bf67, #d0a348, #8d6e30 80%);
+  background-position: right;
+  background-size: 350%;
   padding: 1rem 1.5rem;
 }
 .button, .button:visited, .button:link {
@@ -742,6 +751,17 @@ body {
   text-transform: uppercase;
   font-size: 2rem;
 }
+.button:hover, .button:active {
+  background-position: left;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 114%;
+  height: 130%;
+  border: 2px solid #d0a348;
+}
 
 /** grids **/
 .container {
@@ -750,6 +770,7 @@ body {
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
+.banner,
 .nav-main,
 .header,
 .main,

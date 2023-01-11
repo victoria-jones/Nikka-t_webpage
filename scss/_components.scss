@@ -81,13 +81,18 @@
         &--left {
             flex-grow: 2;
             text-align: center;
-            //background-color: pink;
+
         }
 
         &--right {
             flex-grow: 1;
             text-align: center;
-            //background-color: orange;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-bottom: 1rem;
         }
     }
 
@@ -113,10 +118,6 @@
 
     &__button {
         margin-top: 1rem;
-
-        @include respond(phone) {
-            margin-bottom: 1rem;
-        }
     }
 
     &__background {
@@ -771,6 +772,16 @@
 
 /** button **/
 .button {
+    position: relative;
+    transition: all 0.4s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 13rem;
+    height: 5rem;
+
     &,
     &:visited,
     &:link {
@@ -781,8 +792,27 @@
         font-size: 2rem;
     }
 
-    background-color: $color-primary-gold;
+    @include gold-reflected-gradient-notransparency;
+    background-position: right;
+    background-size: 350%;
     padding: 1rem 1.5rem;
+
+    &:hover,
+    &:active {
+        background-position: left;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 114%;
+        height: 130%;
+
+        border: 2px solid $color-primary-gold;
+    }
+
+
 
 }
 
