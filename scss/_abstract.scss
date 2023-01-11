@@ -1,6 +1,6 @@
-/** VARIABLES **/ 
+/** VARIABLES **/
 
-//colors 
+//colors
 $color-primary-gold: #d0a348;
 $color-primary-gold-light: #fff7da;
 $color-primary-gold-medlight: #f2d978;
@@ -11,11 +11,13 @@ $color-grey-dark: #1e1e1e;
 $color-black:       #000;
 $color-white:       #fff;
 
+$color-alert-red: #FF0A39;
+
 //fonts
 $font-primary: 'Newsreader', serif;
 $font-display: 'Teko', sans-serif;
 
-//font sizing 
+//font sizing
 $default-font-size: 1.6rem;
 $display-font-size: 3.8rem;
 $display-font-size-med: 2.2rem;
@@ -24,15 +26,15 @@ $display-font-size-large: 5.5rem;
 //font weight
 $display-font-weight: 300;
 
-/** MIXINS **/ 
+/** MIXINS **/
 
 @mixin gold-reflected-gradient {
-    background-image: linear-gradient(to right, 
+    background-image: linear-gradient(to right,
             transparent 5%,
-            $color-primary-gold-dark 40%, 
-            $color-primary-gold, 
-            $color-primary-gold-medium, 
-            $color-primary-gold-medlight, 
+            $color-primary-gold-dark 40%,
+            $color-primary-gold,
+            $color-primary-gold-medium,
+            $color-primary-gold-medlight,
             $color-primary-gold-light,
             $color-primary-gold-medlight,
             $color-primary-gold-medium,
@@ -43,11 +45,11 @@ $display-font-weight: 300;
 }
 
 @mixin gold-reflected-gradient-notransparency {
-    background-image: linear-gradient(to right, 
-            $color-primary-gold-dark 20%, 
-            $color-primary-gold, 
-            $color-primary-gold-medium, 
-            $color-primary-gold-medlight, 
+    background-image: linear-gradient(to right,
+            $color-primary-gold-dark 20%,
+            $color-primary-gold,
+            $color-primary-gold-medium,
+            $color-primary-gold-medlight,
             $color-primary-gold-light,
             $color-primary-gold-medlight,
             $color-primary-gold-medium,
@@ -70,7 +72,7 @@ $display-font-weight: 300;
     -moz-text-fill-color: transparent;
 }
 
-/* MEDIA QUERIES */    
+/* MEDIA QUERIES */
 /***********
 $breakpoints:
     - phone-small   300px
@@ -119,4 +121,4 @@ EM used here (do not change to different measurement)
     }
 }
 
-/** FUNCTIONS **/ 
+/** FUNCTIONS **/

@@ -1,4 +1,146 @@
-/** main nav **/ 
+/** banner **/
+.banner {
+    position: fixed;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    &__checkbox {
+        display: none;
+        &:checked + .banner__container{
+            transition: all .4s;
+            bottom: 15rem;
+
+            @include respond(phone) {
+                bottom: 30rem;
+            }
+        }
+    }
+
+    &__container {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: $color-black;
+        border: .3rem solid $color-primary-gold;
+        padding: 1rem 1.5rem;
+    }
+
+    &__close {
+        transition: all .4s;
+
+        position: absolute;
+        z-index: 3;
+
+        align-self: flex-end;
+
+        font-family: sans-serif;
+        font-size: 2.4rem;
+
+
+        &::after {
+            transition: all .4s;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            width: 0;
+            height: 0;
+            box-shadow: 0 0 10rem 5rem $color-primary-gold-medlight;
+            opacity: 0;
+            //margin-left: -25%;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $color-primary-gold;
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        z-index: 1;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
+        &--left {
+            flex-grow: 2;
+            text-align: center;
+            //background-color: pink;
+        }
+
+        &--right {
+            flex-grow: 1;
+            text-align: center;
+            //background-color: orange;
+        }
+    }
+
+    &__CTA {
+        &--p {
+            &--01 {
+                font-family: $font-display;
+                color: $color-primary-gold;
+                font-size: 2.4rem;
+                @include respond(phone) {
+                    padding-top: 3rem;
+                    line-height: 1;
+                    padding-bottom: .5rem;
+                }
+            }
+            &--04 {
+                font-family: $font-display;
+                color: $color-alert-red;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 1rem;
+
+        @include respond(phone) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        width: 100%;
+        bottom: -1.2rem;
+        z-index: -1;
+
+        display: flex;
+        justify-content: end;
+
+        &--img {
+            width: 20%;
+            transform: rotate(-15deg);
+            opacity: .2;
+
+            @include respond(phone) {
+                width: 50%;
+            }
+        }
+    }
+}
+
+/** main nav **/
 
 .nav-main {
     display: flex;
@@ -15,11 +157,11 @@
         filter: drop-shadow(0 .3rem 0 $color-grey-dark)
                 drop-shadow(-.3rem 0 0 $color-grey-dark)
                 drop-shadow(.3rem 0 0 $color-grey-dark);
-        
+
         @include respond(phone) {
             transform: scale(.7) translateY(-2rem);
         }
-                
+
     }
 
     &__bar {
@@ -31,7 +173,7 @@
     }
 }
 
-/** logo **/ 
+/** logo **/
 
 .logo {
     position: relative;
@@ -78,19 +220,19 @@
             width: 55rem;
             margin-top: 4rem;
         }
-    
+
         &__description {
             font-size: 5.5rem;
             margin-right: 3rem;
             @include text-stroke(.15rem, $color-black);
-    
+
             &--bar {
                 width: .5rem;
                 margin: 0 1rem;
                 border: .15rem solid $color-black;
             }
         }
-    
+
         &__glow {
             box-shadow: 0 0 40rem 12rem $color-primary-gold;
         }
@@ -125,7 +267,7 @@
 
     &__music {
         &__glow {
-            box-shadow: 0 0 40rem 12rem $color-primary-gold; 
+            box-shadow: 0 0 40rem 12rem $color-primary-gold;
         }
     }
 
@@ -167,12 +309,12 @@
         }
     }
 
-    &__footer, 
+    &__footer,
     &__header {
         @include respond(phone-med) {
             width: 100%;
             height: 45rem;
-            
+
 
             &__img {
                 width: 25rem;
@@ -202,7 +344,7 @@
 
 }
 
-/** border boxes **/ 
+/** border boxes **/
 .borderbox {
     display: flex;
     justify-content: center;
@@ -325,11 +467,11 @@
         &--1 {
             transform: skewY(10deg);
         }
-    
+
         &--2 {
             transform: skewY(-10deg);
         }
-        
+
         &__about--1,
         &__about--2,
         &__stream--1,
@@ -347,7 +489,7 @@
         &--1 {
             transform: skewY(-10deg);
         }
-    
+
         &--2 {
             transform: skewY(10deg);
         }
@@ -360,7 +502,7 @@
 }
 
 
-/** links **/ 
+/** links **/
 
 .inline-link {
     display: inline-block;
@@ -375,7 +517,7 @@
         width: 0;
         height: 0;
         box-shadow: 0 0 10rem 5rem $color-primary-gold;
-        opacity: 0; 
+        opacity: 0;
         margin-left: -25%;
     }
 
@@ -400,7 +542,7 @@
     }
 }
 
-/** header under line **/ 
+/** header under line **/
 
 .header-2 {
     position: relative;
@@ -426,7 +568,7 @@
 .music__header,
 .contact__header,
 .featured__header {
-    &::after {   
+    &::after {
         left: -79%;
     }
 
@@ -445,7 +587,7 @@
 
         &::after {
             left: -17%;
-        }   
+        }
         &::before {
             left: -20%;
         }
@@ -453,7 +595,7 @@
 }
 
 .stream__header {
-    &::after { 
+    &::after {
         left: -17%;
     }
 
@@ -466,20 +608,20 @@
     }
 }
 
-/** lists **/ 
+/** lists **/
 
 .list {
     list-style-type: none;
     transition: all .4s;
 
     &__svg {
-        fill: url(#gradient-start) $color-primary-gold;   
+        fill: url(#gradient-start) $color-primary-gold;
     }
 
     &__item {
        &:not(:last-child) {
            margin-bottom: .5rem;
-       } 
+       }
     }
 
     &__link {
@@ -500,7 +642,7 @@
         }
 
         &:hover {
-            background-position: 20rem 0; 
+            background-position: 20rem 0;
         }
     }
 
@@ -523,7 +665,7 @@
             margin-right: 2rem;
             margin-bottom: -.2rem;
         }
-    
+
         margin-bottom: 2rem;
 
         &__featured {
@@ -565,7 +707,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        
+
         &__item {
             &:not(:last-child) {
                 margin-right: 5rem;
@@ -624,6 +766,23 @@
             }
         }
     }
+
+}
+
+/** button **/
+.button {
+    &,
+    &:visited,
+    &:link {
+        color: $color-white;
+        text-decoration: none;
+        font-family: $font-display;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    background-color: $color-primary-gold;
+    padding: 1rem 1.5rem;
 
 }
 
