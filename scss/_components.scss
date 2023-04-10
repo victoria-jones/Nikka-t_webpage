@@ -14,10 +14,12 @@
         display: none;
         &:checked + .banner__container{
             transition: all .4s;
-            bottom: 15rem;
+            //bottom: 18rem;
+            bottom: 100vh;
 
             @include respond(phone) {
-                bottom: 30rem;
+                //bottom: 30rem;
+                bottom: 100vh;
             }
         }
     }
@@ -74,6 +76,10 @@
         display: flex;
         z-index: 1;
 
+        &--set-to-column {
+            flex-direction: column;
+        }
+
         @include respond(phone) {
             flex-direction: column;
         }
@@ -93,6 +99,10 @@
             align-items: center;
 
             margin-bottom: 1rem;
+
+            &--cta-image {
+                justify-content: center;
+            }
         }
     }
 
@@ -112,6 +122,20 @@
                 font-family: $font-display;
                 color: $color-alert-red;
                 font-size: 2rem;
+            }
+        }
+
+        &--image {
+            //width: 100%;
+            //max-width: 62rem;
+            //max-width: 64.8rem;
+            height: 80vh;
+            max-height: 86.3rem;
+
+            @include respond(phone) {
+                max-width: 100%;
+                height: auto;
+                max-height: auto;
             }
         }
     }
