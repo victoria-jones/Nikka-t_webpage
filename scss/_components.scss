@@ -7,19 +7,23 @@
     justify-content: center;
 
     width: 100%;
+    transition: all .4s;
 
-    overflow: hidden;
+    //bottom: 0;
+    top: 0;
 
     &__checkbox {
         display: none;
-        &:checked + .banner__container{
+        &:checked + .banner {
             transition: all .4s;
             //bottom: 18rem;
-            bottom: 100vh;
+            //bottom: 100vh;
+            top: -100vh;
 
             @include respond(phone) {
                 //bottom: 30rem;
-                bottom: 100vh;
+                //bottom: 100vh;
+                top: -100vh;
             }
         }
     }

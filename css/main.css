@@ -115,18 +115,19 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  overflow: hidden;
+  transition: all 0.4s;
+  top: 0;
 }
 .banner__checkbox {
   display: none;
 }
-.banner__checkbox:checked + .banner__container {
+.banner__checkbox:checked + .banner {
   transition: all 0.4s;
-  bottom: 100vh;
+  top: -100vh;
 }
 @media only screen and (max-width: 37.5em) {
-  .banner__checkbox:checked + .banner__container {
-    bottom: 100vh;
+  .banner__checkbox:checked + .banner {
+    top: -100vh;
   }
 }
 .banner__container {
