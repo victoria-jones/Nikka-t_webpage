@@ -253,7 +253,8 @@
         &__description {
             font-size: 5.5rem;
             margin-right: 3rem;
-            @include text-stroke(.15rem, $color-black);
+            @include text-stroke(.15rem, $color-black); //this is acting weird...
+            //@include alt-text-stroke(.15rem, $color-black);
 
             &--bar {
                 width: .5rem;

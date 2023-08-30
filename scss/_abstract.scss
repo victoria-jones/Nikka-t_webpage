@@ -63,6 +63,14 @@ $display-font-weight: 300;
     -webkit-text-stroke: $stroke $color;
 }
 
+@mixin alt-text-stroke($stroke, $color) {
+    text-shadow: $stroke $stroke 0 $color,
+        -$stroke -$stroke 0 $color,
+        $stroke $stroke 0 $color,
+        -$stroke -$stroke 0 $color,
+        $stroke $stroke 0 $color
+}
+
 @mixin background-clip {
     background-clip: text;
     -webkit-background-clip: text;
