@@ -4,7 +4,7 @@ REM sizing used for styling
 base size:  1rem = 10px
 
 def:
-- base browser sizes at 16px 
+- base browser sizes at 16px
 - changed to 62.5% to equal 10px
 - conversions are (desired px size)/16px
     - change to percent
@@ -52,7 +52,7 @@ body {
         background-color: $color-primary-gold;
         transform: rotate(45deg);
         margin: 2rem auto;
-    } 
+    }
 
     @include respond(tab-land) {
         text-align: center;
@@ -73,6 +73,10 @@ body {
     font-weight: $display-font-weight;
 }
 
-/** UTILITIES **/ 
+.header {
+    font-weight: $display-font-weight;
+}
 
-/** ANIMATIONS **/ 
+/** UTILITIES **/
+
+/** ANIMATIONS **/

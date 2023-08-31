@@ -251,15 +251,64 @@
         }
 
         &__description {
+            position: relative;
             font-size: 5.5rem;
-            margin-right: 3rem;
-            @include text-stroke(.15rem, $color-black); //this is acting weird...
+            //margin-right: 3rem;
+            margin-right: 18.5rem;
+            //@include text-stroke(.15rem, $color-black); //this is acting weird...
             //@include alt-text-stroke(.15rem, $color-black);
 
+            &--1 {
+                height: 16.3rem;
+                //width: 17.5rem;
+                width: 18.9rem;
+            }
+
+            &--text {
+                position: relative;
+                height: 5.5rem;
+
+                &--top,
+                &--stroke {
+                    position: absolute;
+                }
+                &--top {
+                    z-index: 1;
+                }
+                &--stroke {
+                    @include text-stroke(.4rem, $color-black);
+                }
+
+                &--1 {
+                    display: flex;
+                    justify-content: end;
+                    text-align: right;
+
+                    &--top,
+                    &--stroke {
+                        right: 0;
+                        text-align: right;
+                    }
+                }
+            }
             &--bar {
                 width: .5rem;
                 margin: 0 1rem;
                 border: .15rem solid $color-black;
+            }
+
+            @include respond(phone){
+                margin-right: 11.1rem;
+                &--text {
+                    height: 4.5rem;
+                }
+                &--1 {
+                    //height: 4.5rem;
+                    width: 11rem;
+                }
+                &--bar {
+                    height: 13rem;
+                }
             }
         }
 

@@ -41,7 +41,7 @@ REM sizing used for styling
 base size:  1rem = 10px
 
 def:
-- base browser sizes at 16px 
+- base browser sizes at 16px
 - changed to 62.5% to equal 10px
 - conversions are (desired px size)/16px
     - change to percent
@@ -103,6 +103,10 @@ body {
   text-transform: uppercase;
   font-family: "Teko", sans-serif;
   font-size: 5.5rem;
+  font-weight: 300;
+}
+
+.header {
   font-weight: 300;
 }
 
@@ -313,15 +317,55 @@ body {
   margin-top: 4rem;
 }
 .logo__header__description {
+  position: relative;
   font-size: 5.5rem;
-  margin-right: 3rem;
-  text-stroke: 0.15rem #000;
-  -webkit-text-stroke: 0.15rem #000;
+  margin-right: 18.5rem;
+}
+.logo__header__description--1 {
+  height: 16.3rem;
+  width: 18.9rem;
+}
+.logo__header__description--text {
+  position: relative;
+  height: 5.5rem;
+}
+.logo__header__description--text--top, .logo__header__description--text--stroke {
+  position: absolute;
+}
+.logo__header__description--text--top {
+  z-index: 1;
+}
+.logo__header__description--text--stroke {
+  text-stroke: 0.4rem #000;
+  -webkit-text-stroke: 0.4rem #000;
+}
+.logo__header__description--text--1 {
+  display: flex;
+  justify-content: end;
+  text-align: right;
+}
+.logo__header__description--text--1--top, .logo__header__description--text--1--stroke {
+  right: 0;
+  text-align: right;
 }
 .logo__header__description--bar {
   width: 0.5rem;
   margin: 0 1rem;
   border: 0.15rem solid #000;
+}
+@media only screen and (max-width: 37.5em) {
+  .logo__header__description {
+    margin-right: 11.1rem;
+  }
+  .logo__header__description--text {
+    height: 4.5rem;
+  }
+  .logo__header__description--1 {
+    width: 11rem;
+  }
+  .logo__header__description--bar {
+    height: 13rem;
+  }
 }
 .logo__header__glow {
   box-shadow: 0 0 40rem 12rem #d0a348;
@@ -600,22 +644,22 @@ body {
 
 @media only screen and (max-width: 37.5em) {
   .music__header,
-.contact__header,
-.stream__header,
-.featured__header {
+  .contact__header,
+  .stream__header,
+  .featured__header {
     line-height: 1;
     padding-bottom: 2rem;
   }
   .music__header::after,
-.contact__header::after,
-.stream__header::after,
-.featured__header::after {
+  .contact__header::after,
+  .stream__header::after,
+  .featured__header::after {
     left: -17%;
   }
   .music__header::before,
-.contact__header::before,
-.stream__header::before,
-.featured__header::before {
+  .contact__header::before,
+  .stream__header::before,
+  .featured__header::before {
     left: -20%;
   }
 }
