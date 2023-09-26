@@ -247,6 +247,15 @@ body {
   }
 }
 
+/** tour banner **/
+.tour-banner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #000;
+  height: 7rem;
+}
+
 /** main nav **/
 .nav-main {
   display: flex;
@@ -833,6 +842,7 @@ body {
 }
 
 .banner,
+.tour-banner,
 .nav-main,
 .header,
 .main,
@@ -840,7 +850,8 @@ body {
   grid-column: 1/-1;
 }
 
-.nav-main {
+.nav-main,
+.tour-banner {
   grid-row: 1;
 }
 

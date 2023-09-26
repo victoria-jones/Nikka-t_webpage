@@ -169,6 +169,19 @@
     }
 }
 
+/** tour banner **/
+.tour-banner {
+    position: relative;
+    //top:0; bottom: 0;
+    z-index: 1;
+
+    width: 100%;
+    //display: block;
+
+    background-color: $color-black;
+    height: 7rem;
+}
+
 /** main nav **/
 
 .nav-main {
