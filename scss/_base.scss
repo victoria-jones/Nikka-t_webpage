@@ -22,6 +22,11 @@ def:
 
 html {
     font-size: 62.5%;   //1rem = 10px
+    scroll-behavior: smooth;
+
+    @media screen and (prefers-reduced-mothion: reduce) {
+        scroll-behavior: auto;
+    }
 }
 
 //browser reset
@@ -80,3 +85,9 @@ body {
 /** UTILITIES **/
 
 /** ANIMATIONS **/
+
+@keyframes simpleRotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}

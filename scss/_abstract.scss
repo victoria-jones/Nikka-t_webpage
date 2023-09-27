@@ -58,6 +58,20 @@ $display-font-weight: 300;
             );
 }
 
+@mixin gold-reflect-conic-gradient-transparent {
+    background-image: conic-gradient(
+        $color-primary-gold-dark 20deg,
+        $color-primary-gold,
+        $color-primary-gold-medium,
+        transparent 120deg
+    );
+}
+
+@mixin rotatingBorderWithAnimation {
+    @include gold-reflect-conic-gradient-transparent;
+    animation: simpleRotate 3s infinite linear;
+}
+
 @mixin text-stroke($stroke, $color) {
     text-stroke: $stroke $color;
     -webkit-text-stroke: $stroke $color;

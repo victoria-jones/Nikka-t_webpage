@@ -171,15 +171,62 @@
 
 /** tour banner **/
 .tour-banner {
-    position: relative;
-    //top:0; bottom: 0;
     z-index: 1;
+    position: relative;
 
-    width: 100%;
-    //display: block;
-
-    background-color: $color-black;
     height: 7rem;
+    padding: .2rem;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -72vw;
+        right: -26vw;
+        height: 150vw;
+        width: 150vw;
+        @include rotatingBorderWithAnimation;
+    }
+
+    &__container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $color-black;
+    }
+
+    &__side {
+
+        &--left {
+            display: flex;
+        }
+    }
+
+    &__text {
+        &--text-01 {
+            padding-right: .5rem;
+            padding-top: .5rem;
+        }
+
+        &--text-02 {
+            font-size: 2.5rem;
+            font-family: $font-display;
+            color: $color-primary-gold;
+            transform: rotate(-7deg);
+        }
+    }
+
+    @include respond(tab-port) {
+        height: 9.5rem;
+        &__container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 /** main nav **/
@@ -901,6 +948,11 @@
         height: 130%;
 
         border: 2px solid $color-primary-gold;
+    }
+
+    &--small {
+        width: 10.5rem;
+        height: 4.5rem;
     }
 
 

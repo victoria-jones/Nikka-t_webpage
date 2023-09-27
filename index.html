@@ -29,24 +29,36 @@
         <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
         <title>Nikka T</title>
+
+        <script type="text/javascript">
+            function checkTour() {
+                if(document.getElementsByClassName('tour-banner')[0]) {
+                    document.getElementsByClassName('nav-main')[0].style.marginTop = "10rem";
+                }
+            }
+        </script>
     </head>
 
-    <body class="container">
-        <!--<div class="tour-banner">
+    <body class="container" onload="checkTour()">
+        <div class="tour-banner">
             <div class="tour-banner__container">
-                <div class="tour-banner__side tour-banner__side-left">
-                    <div class="tour-banner__text--text-01">
+                <div class="tour-banner__side tour-banner__side--left">
+                    <div class="tour-banner__text tour-banner__text--text-01">
                         DJ Nikka T on Tour Now!
                     </div>
-                    <div class="tour-banner__text--text-02">
+                    <div class="tour-banner__text tour-banner__text--text-02">
                         Essential World Tour 2023
                     </div>
                 </div>
-                <div class="tour-banner__side tour-banner__side-right">
-                    See Tour Dates
+                <div class="tour-banner__side tour-banner__side--right">
+                    <div class="tour-banner__button">
+                        <a href="#tour-dates" class="button button--small">
+                            Tour Dates
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>-->
+        </div>
 
         <input type="checkbox" id="banner__checkbox" class="banner__checkbox"/>
         <div class="banner">
@@ -293,6 +305,18 @@
                                 <div class="borderbox--1"></div>
                                 <div class="borderbox--2"></div>
                             </div>
+                        </div>
+
+                    </div>
+
+                    <div class="music__tour" id="tour-dates">
+
+                        <h2 class="subsection__header music__header header-2">
+                            Essential World Tour 2023
+                        </h2>
+
+                        <div class="music__tour__container">
+                            <img class="music__tour__flyer" src="img/nikka-t_world-tour_2023_updated-dates.png" alt="Dj Nikka T Essential World Tour 2023" />
                         </div>
 
                     </div>

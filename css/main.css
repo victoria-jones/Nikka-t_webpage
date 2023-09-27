@@ -58,6 +58,12 @@ def:
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@media screen and (prefers-reduced-mothion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -112,6 +118,11 @@ body {
 
 /** UTILITIES **/
 /** ANIMATIONS **/
+@keyframes simpleRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /** banner **/
 .banner {
   position: fixed;
@@ -249,11 +260,53 @@ body {
 
 /** tour banner **/
 .tour-banner {
-  position: relative;
   z-index: 1;
-  width: 100%;
-  background-color: #000;
+  position: relative;
   height: 7rem;
+  padding: 0.2rem;
+  overflow: hidden;
+}
+.tour-banner::before {
+  content: "";
+  position: absolute;
+  top: -72vw;
+  right: -26vw;
+  height: 150vw;
+  width: 150vw;
+  background-image: conic-gradient(#8d6e30 20deg, #d0a348, #e4bf67, transparent 120deg);
+  animation: simpleRotate 3s infinite linear;
+}
+.tour-banner__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #000;
+}
+.tour-banner__side--left {
+  display: flex;
+}
+.tour-banner__text--text-01 {
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+}
+.tour-banner__text--text-02 {
+  font-size: 2.5rem;
+  font-family: "Teko", sans-serif;
+  color: #d0a348;
+  transform: rotate(-7deg);
+}
+@media only screen and (max-width: 56.25em) {
+  .tour-banner {
+    height: 9.5rem;
+  }
+  .tour-banner__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /** main nav **/
@@ -833,6 +886,10 @@ body {
   height: 130%;
   border: 2px solid #d0a348;
 }
+.button--small {
+  width: 10.5rem;
+  height: 4.5rem;
+}
 
 /** grids **/
 .container {
@@ -1054,6 +1111,23 @@ body {
 .music__content--2__img {
   position: absolute;
   z-index: 2;
+}
+.music__tour {
+  margin-top: 10rem;
+}
+.music__tour__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music__tour__flyer {
+  width: 100%;
+  max-width: 75rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .music__tour {
+    margin-top: 50rem;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .music__header {

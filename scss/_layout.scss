@@ -238,6 +238,23 @@ body {
         }
     }
 
+    &__tour {
+        margin-top: 10rem;
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__flyer {
+            width: 100%;
+            max-width: 75rem;
+        }
+
+        @include respond(tab-port) {
+            margin-top: 50rem;
+        }
+    }
+
     @include respond (tab-port) {
         &__header {
             margin-top: 5rem;
