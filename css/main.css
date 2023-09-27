@@ -262,9 +262,14 @@ body {
 .tour-banner {
   z-index: 1;
   position: relative;
-  height: 7rem;
+  height: 10rem;
   padding: 0.2rem;
   overflow: hidden;
+}
+@media only screen and (max-width: 37.5em) {
+  .tour-banner {
+    height: 11rem !important;
+  }
 }
 .tour-banner::before {
   content: "";
@@ -297,6 +302,11 @@ body {
   font-family: "Teko", sans-serif;
   color: #d0a348;
   transform: rotate(-7deg);
+}
+@media only screen and (max-width: 37.5em) {
+  .tour-banner__text--text-02 {
+    font-size: 2.2rem;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .tour-banner {

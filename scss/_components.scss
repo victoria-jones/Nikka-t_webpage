@@ -174,9 +174,14 @@
     z-index: 1;
     position: relative;
 
-    height: 7rem;
+    //height: 7rem;
+    height: 10rem;
     padding: .2rem;
     overflow: hidden;
+
+    @include respond(phone) {
+        height: 11rem !important;
+    }
 
     &::before {
         content: '';
@@ -216,6 +221,10 @@
             font-family: $font-display;
             color: $color-primary-gold;
             transform: rotate(-7deg);
+
+            @include respond(phone) {
+                font-size: 2.2rem;
+            }
         }
     }
 
