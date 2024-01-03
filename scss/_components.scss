@@ -39,6 +39,8 @@
         background-color: $color-black;
         border: .3rem solid $color-primary-gold;
         padding: 1rem 1.5rem;
+
+        overflow: hidden;
     }
 
     &__close {
@@ -78,24 +80,33 @@
     &__content {
         position: relative;
         display: flex;
+        justify-content: space-around;
+        align-items: center;
         z-index: 1;
 
         &--set-to-column {
             flex-direction: column;
         }
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             flex-direction: column;
         }
 
         &--left {
-            flex-grow: 2;
+            //flex-grow: 2;
             text-align: center;
 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include respond(tab-port) {
+                margin-bottom: 3rem;
+            }
         }
 
         &--right {
-            flex-grow: 1;
+            //flex-grow: 1;
             text-align: center;
 
             display: flex;

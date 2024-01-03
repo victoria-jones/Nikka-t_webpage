@@ -154,6 +154,7 @@ body {
   background-color: #000;
   border: 0.3rem solid #d0a348;
   padding: 1rem 1.5rem;
+  overflow: hidden;
 }
 .banner__close {
   transition: all 0.4s;
@@ -183,22 +184,30 @@ body {
 .banner__content {
   position: relative;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   z-index: 1;
 }
 .banner__content--set-to-column {
   flex-direction: column;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 56.25em) {
   .banner__content {
     flex-direction: column;
   }
 }
 .banner__content--left {
-  flex-grow: 2;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .banner__content--left {
+    margin-bottom: 3rem;
+  }
 }
 .banner__content--right {
-  flex-grow: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
