@@ -137,6 +137,15 @@
                 font-family: $font-display;
                 color: $color-alert-red;
                 font-size: 2rem;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &--freebetty {
+                color: $color-alert-red;
+                font-family: $font-display;
+                font-size: 2rem;
             }
         }
 
