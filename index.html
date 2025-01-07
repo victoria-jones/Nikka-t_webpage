@@ -212,6 +212,7 @@
         </svg>
 
         <div class="nav-main">
+
             <div class="nav-main__socialmedia socialmedia">
                 <ul class="list list__nav list__nav-main">
                     <li class="list__item list__nav__item list__nav-main__item"><a href="https://www.facebook.com/OfficialNikkaTpage/" class="list__link list__nav__link">
@@ -244,6 +245,35 @@
             <img src="img/nikka_t_logo_01.png" alt="Nikka T logo" class="nav-main__logo" />
             <span class="nav-main__bar">&nbsp;</span>
         </div>
+
+        <!-- website main navigation -->
+        <input type="checkbox" id="website-nav__checkbox" class="website-nav__checkbox" />
+            <label for="website-nav__checkbox" class="website-nav__menu">
+                <div class="website-nav__menu__bar"></div>
+            </label>
+
+            <div class="website-nav">
+                <ul class="website-nav__list">
+                    <li class="website-nav__list__item">
+                        <a href="#" class="website-nav__list__item__link">Home</a>
+                    </li>
+                    <li class="website-nav__list__item">
+                        <a href="#about" class="website-nav__list__item__link">About</a>
+                    </li>
+                    <li class="website-nav__list__item">
+                        <a href="#djhosting" class="website-nav__list__item__link">dJ & Hosting</a>
+                    </li>
+                    <li class="website-nav__list__item">
+                        <a href="#virtualevent" class="website-nav__list__item__link">Virtual Event</a>
+                    </li>
+                    <li class="website-nav__list__item">
+                        <a href="#" class="website-nav__list__item__link">Media Kit</a>
+                    </li>
+                    <li class="website-nav__list__item">
+                        <a href="#contact" class="website-nav__list__item__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
 
         <header class="header">
             <div class="logo__header logo">
@@ -295,7 +325,7 @@
 
         <main class="main">
 
-            <section class="about main-section">
+            <section class="about main-section" id="about">
                 <div class="skewbox skewbox-upward skewbox-upward__about">
                     <div class="skewbox--1 skewbox-upward--1 skewbox-upward__about--1">&nbsp;</div>
                     <div class="skewbox--1 skewbox-upward--2 skewbox-upward__about--2">&nbsp;</div>
@@ -361,7 +391,7 @@
                     <div class="skewbox--1 skewbox-downward--2 skewbox-downward__music--2">&nbsp;</div>
                 </div>
 
-                <div class="main-section__container">
+                <div class="main-section__container" id="djhosting">
                     <h2 class="section__header music__header header-2">International DJ & Host</h2>
 
                     <div class="music__content">
@@ -433,7 +463,7 @@
                     <div class="skewbox--1 skewbox-upward--2 skewbox-upward__stream--2">&nbsp;</div>
                 </div>
 
-                <div class="main-section__container">
+                <div class="main-section__container" id="virtualevent">
                     <h2 class="section__header stream__header header-2">Virtual Event Production</h2>
 
                     <div class="stream__content">
@@ -475,7 +505,7 @@
             </section>
 
             <section class="contact main-section">
-                <div class="main-section__container">
+                <div class="main-section__container" id="contact">
                     <h2 class="section__header contact__header header-2">Contact</h2>
                     <div class="contact__content">
 
@@ -597,5 +627,6 @@
                 </div>
             </section>
         </footer>
+        <script src="js/nav-menu-listener.js"></script>
     </body>
 </html>

@@ -364,6 +364,87 @@ body {
   background-image: linear-gradient(to right, transparent 5%, #8d6e30 40%, #d0a348, #e4bf67, #f2d978, #fff7da, #f2d978, #e4bf67, #d0a348, #8d6e30 60%, transparent 95%);
 }
 
+.website-nav {
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.website-nav__checkbox {
+  display: none;
+}
+.website-nav__checkbox:checked + label + .website-nav, .website-nav__checkbox:checked + label + .website-nav::after, .website-nav__checkbox:checked + label + .website-nav .website-nav__list {
+  left: 0;
+}
+.website-nav__checkbox:checked + label + .website-nav {
+  z-index: 10000;
+}
+.website-nav__menu:hover {
+  cursor: pointer;
+}
+.website-nav__menu {
+  position: fixed;
+  left: 2rem;
+  z-index: 100000;
+  width: 4rem;
+  height: 4rem;
+}
+.website-nav__menu__bar {
+  position: absolute;
+  top: 1rem;
+  width: 4rem;
+  height: 0.3rem;
+  background-color: #d0a348;
+}
+.website-nav__menu__bar::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #d0a348;
+}
+.website-nav__menu__bar::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #d0a348;
+}
+.website-nav::after {
+  transition: all 0.8s;
+  content: "";
+  left: -200%;
+  position: absolute;
+  width: 220%;
+  height: 100%;
+  background: linear-gradient(100deg, black 50%, transparent 50%, transparent 0%);
+}
+.website-nav__list {
+  transition: all 0.8s ease;
+  position: relative;
+  z-index: 1;
+  list-style-type: none;
+  left: -100%;
+}
+.website-nav__list__item {
+  margin-bottom: 2rem;
+}
+.website-nav__list__item__link {
+  font-family: "Teko", sans-serif;
+  color: #d0a348;
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+
 /** logo **/
 .logo {
   position: relative;
