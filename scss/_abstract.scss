@@ -28,6 +28,27 @@ $display-font-weight: 300;
 
 /** MIXINS **/
 
+
+@mixin hover-glow {
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 0;
+        height: 0;
+        box-shadow: 0 0 10rem 5rem $color-primary-gold;
+        opacity: 0;
+        margin-left: -25%;
+    }
+    &:hover {
+        transform: scale(1.2) rotate(-10deg);
+        color: $color-primary-gold-medlight;
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
 @mixin gold-reflected-gradient {
     background-image: linear-gradient(to right,
             transparent 5%,
