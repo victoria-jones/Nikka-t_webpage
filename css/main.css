@@ -968,8 +968,6 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
-  z-index: 1;
 }
 .list__nav__item:not(:last-child) {
   margin-right: 5rem;
