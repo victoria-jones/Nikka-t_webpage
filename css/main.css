@@ -1108,13 +1108,13 @@ body {
 }
 
 /** header **/
-.header {
+.header__main {
   height: 110vh;
   background-color: #000;
   margin-bottom: -5vw;
   min-height: 72rem;
 }
-.header::after {
+.header__main::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -1125,30 +1125,59 @@ body {
   opacity: 0.4;
 }
 @media only screen and (max-width: 75em) {
-  .header::after {
+  .header__main::after {
     background-image: url(../img/nikka-t_02_med.jpg);
     background-position: center;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .header::after {
+  .header__main::after {
     background-image: url(../img/nikka-t_02_small.jpg);
   }
 }
 @media only screen and (max-width: 75em) {
-  .header {
+  .header__main {
     min-height: 90rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .header {
+  .header__main {
     min-height: initial;
   }
 }
 @media only screen and (max-height: 46.25em) {
-  .header {
+  .header__main {
     min-height: 90rem;
   }
+}
+.header__media-kit {
+  position: relative;
+  min-height: 110vh;
+  clip-path: polygon(0% 0%, 50% 0, 100% 0%, 100% 100%, 50% 90%, 0% 100%);
+}
+.header__media-kit::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../img/media-kit/dj-nikka-t_hero-image-gradient_large.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.header__media-kit::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  background-color: black;
 }
 
 /** about **/
