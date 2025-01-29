@@ -108,7 +108,10 @@ body {
         position: relative;
         //z-index: 1;
         min-height: 110vh;
-        @include arrow-up-polygon-bottom;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &::before {
             content: "";
@@ -116,13 +119,13 @@ body {
             height: 100%;
             display: block;
             position: absolute;
-            //z-index: -2;
+            z-index: -1;
             top:0;
             right: 0;
             background-image: url(../img/media-kit/dj-nikka-t_hero-image-gradient_large.jpg);
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: center;
+            background-position: top center;
         }
 
         &::after {
@@ -135,6 +138,23 @@ body {
             top:0;
             right: 0;
             background-color: black;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            max-width: 47rem;
+            padding: 0 0 25% 0;
+        }
+        &__logo {
+            margin: 20rem 0 0 0;
+        }
+        &__button {
+            margin-bottom: 5rem;
         }
     }
 }
@@ -583,6 +603,16 @@ body {
             height: 17rem;
         }
     }
+}
+
+/** bookings **/
+.bookings {
+    position: relative;
+    top: -2.5%;
+    z-index: 1;
+    @include arrow-up-and-down;
+    background-color: $color-grey-dark;
+    padding: 20% 0 10% 0;
 }
 
 /** footer **/

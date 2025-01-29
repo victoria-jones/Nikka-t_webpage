@@ -36,6 +36,10 @@ $display-font-weight: 300;
     clip-path: polygon(0% 0%, 50% 0, 100% 0%, 100% 100%, 50% 90%, 0% 100%);
 }
 
+@mixin arrow-up-and-down {
+    clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
+}
+
 @mixin arrow-down-polygon-top {
     clip-path: polygon(0% 0, 50% 0, 100% 0, 100% 90%, 50% 100%, 0% 90%);
 }

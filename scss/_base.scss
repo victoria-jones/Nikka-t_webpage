@@ -44,6 +44,30 @@ body {
     color: $color-white;
 }
 
+.extra-bold {
+    font-weight: 500;
+}
+
+.diamond-paragraphs {
+    //color: $color-primary-gold;
+    font-family: $font-display;
+    font-size: $display-font-size-med;
+    line-height: 1.2;
+    font-weight: 300;
+
+    &__p:not(:last-child) {
+        &::after {
+            content: "";
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: $color-primary-gold;
+            transform: rotate(45deg);
+            margin: 2rem auto;
+        }
+    }
+}
+
 .bold-copy {
     color: $color-primary-gold;
     font-family: $font-display;

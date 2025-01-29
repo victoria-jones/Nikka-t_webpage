@@ -79,6 +79,26 @@ body {
   color: #fff;
 }
 
+.extra-bold {
+  font-weight: 500;
+}
+
+.diamond-paragraphs {
+  font-family: "Teko", sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+.diamond-paragraphs__p:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #d0a348;
+  transform: rotate(45deg);
+  margin: 2rem auto;
+}
+
 .bold-copy {
   color: #d0a348;
   font-family: "Teko", sans-serif;
@@ -344,6 +364,7 @@ body {
   position: relative;
   z-index: 1;
   margin-top: 2rem;
+  height: 15rem;
 }
 .nav-main__logo {
   position: relative;
@@ -1153,7 +1174,9 @@ body {
 .header__media-kit {
   position: relative;
   min-height: 110vh;
-  clip-path: polygon(0% 0%, 50% 0, 100% 0%, 100% 100%, 50% 90%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__media-kit::before {
   content: "";
@@ -1161,12 +1184,13 @@ body {
   height: 100%;
   display: block;
   position: absolute;
+  z-index: -1;
   top: 0;
   right: 0;
   background-image: url(../img/media-kit/dj-nikka-t_hero-image-gradient_large.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: top center;
 }
 .header__media-kit::after {
   content: "";
@@ -1178,6 +1202,21 @@ body {
   top: 0;
   right: 0;
   background-color: black;
+}
+.header__media-kit__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 47rem;
+  padding: 0 0 25% 0;
+}
+.header__media-kit__logo {
+  margin: 20rem 0 0 0;
+}
+.header__media-kit__button {
+  margin-bottom: 5rem;
 }
 
 /** about **/
@@ -1555,6 +1594,16 @@ body {
     width: 17rem;
     height: 17rem;
   }
+}
+
+/** bookings **/
+.bookings {
+  position: relative;
+  top: -2.5%;
+  z-index: 1;
+  clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
+  background-color: #1e1e1e;
+  padding: 20% 0 10% 0;
 }
 
 /** footer **/
