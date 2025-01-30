@@ -735,7 +735,8 @@
     }
 }
 
-.contact__img-borderbox {
+.contact__img-borderbox,
+.yours-truly__image-borderbox {
     &--2 {
         background-color: $color-black;
     }
@@ -1121,7 +1122,7 @@
     height: 88rem;
     top: -99.1rem;
     margin-bottom: -100rem;
-    z-index: 0;
+    z-index: 1;
 
     &__line {
         position: relative;
@@ -1185,4 +1186,11 @@
     }
 }
 
+/** soundcloud-player **/
+.soundcloud-player {
+
+    &:not(:last-child) {
+        margin: 0 0 2rem 0;
+    }
+}
 
