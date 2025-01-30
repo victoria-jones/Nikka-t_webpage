@@ -611,8 +611,45 @@ body {
     top: -2.5%;
     z-index: 1;
     @include arrow-up-and-down;
-    background-color: $color-grey-dark;
-    padding: 20% 0 10% 0;
+    //background-color: $color-grey-dark;
+    padding: 15% 0 10% 0;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top:0;
+        right: 0;
+        background-image: url(../img/media-kit/dj-nikka-t-live-02_bg-image-gradient_large.jpg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center right;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        z-index: -2;
+        top:0;
+        right: 0;
+        background-color: black;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/** bands **/
+.bands {
+
 }
 
 /** footer **/

@@ -321,9 +321,10 @@
                     <h2 class="section__header music__header header-2">Bookings</h2>
 
                     <div class="bookings__content">
-                        <div class="bookings__copy">
-                            <div class="bookings__previous-bookings">
-                                <ul class="list list__bullet list__bullet__booking">
+                        <div class="bookings__bookings-list-wrapper">
+
+                            <ul class="list list__bullet bookings__list">
+                                <div class="list__section bookings__list__section">
                                     <li class="list__item list__bullet__item">
                                         <span class="list__link list__bullet__link">
                                             Reggae on the Rocks (Colorado)
@@ -369,6 +370,9 @@
                                             The Secret Cup (LA)
                                         </span>
                                     </li>
+                                </div>
+
+                                <div class="list__section bookings__list__section">
                                     <li class="list__item list__bullet__item">
                                         <span class="list__link list__bullet__link">
                                             Chalice California (San Bernardino)
@@ -414,77 +418,91 @@
                                             Senbarn 10Yr Anniversary (Vermont)
                                         </span>
                                     </li>
-                                </ul>
-                            </div>
+                                </div>
+                            </ul>
                         </div>
 
                     </div>
 
                 </div>
-
             </section>
+            <div class="decorative-bottom-border decorative-bottom-border__bookings">
+                <div class="decorative-bottom-border__line decorative-bottom-border__bookings__line">
+                    <div class="decorative-bottom-border__line-inside decorative-bottom-border__bookings__line-inside"></div>
+                    <div class="decorative-bottom-border__line-inside--02 decorative-bottom-border__bookings__line-inside--02"></div>
+                    <div class="decorative-bottom-border__line-inside--03 decorative-bottom-border__bookings__line-inside--03"></div>
+                    <div class="decorative-bottom-border__line-inside--04 decorative-bottom-border__bookings__line-inside--04"></div>
+                </div>
+            </div>
 
             <!-- bands section -->
-            <section class="music main-section">
+            <section class="bands main-section">
 
-                <div class="main-section__container" id="djhosting">
-                    <h2 class="section__header music__header header-2">Bands</h2>
+                <div class="main-section__container" id="bands">
+                    <h2 class="section__header stream__header header-2">Bands</h2>
 
-                    <div class="music__content">
+                    <div class="bands__content">
 
-                        <div class="music__content--1">
-                            <p class="p__copy">
-                                Between his passion for cannabis and music, timed perfectly with the onset of legalization in the US and beyond, Nikka T continues to expand his brand, techniques, and music all over the globe nationally and internationally. For now you can find him blessing California with <a href="https://www.essentialextracts.ca/" target="blank" class="inline-link">Solventless Extracts</a> and cultivating the most irie musical experiences worldwide!
-                            </p>
+                        <div class="bands__content__side bands__content__side--1">
 
-                            <ul class="list list__bullet music__list__bullet">
-                                <li class="list__item list__bullet__item"><a href="https://drive.google.com/file/d/1rWiP_fO8d3RAr6Hqyobj9PVOz_Qkif0k/view" target="blank" class="list__link list__bullet__link">Soulful Amapiano AfroHouse Blends</a></li>
-                                <li class="list__item list__bullet__item"><a href="https://www.youtube.com/watch?v=xvv79DPfZnc" target="blank" class="list__link list__bullet__link">Audio Terps Feat. Nikka T Pt3 Side A</a></li>
-                                <li class="list__item list__bullet__item"><a href="https://www.youtube.com/watch?v=dxzI9p83fN0" target="blank" class="list__link list__bullet__link">Sensi Sessions Feat. Nikka T</a></li>
-                                <li class="list__item list__bullet__item"><a href="https://www.youtube.com/watch?v=5bSRmtgYPZk" target="blank" class="list__link list__bullet__link">Sensi Sessions Feat. Nikka T Vol 2</a></li>
-                                <li class="list__item list__bullet__item"><a href="https://www.youtube.com/watch?v=xd4IyTSjaFQ" target="blank" class="list__link list__bullet__link">Irie Vibes Mix 2023</a></li>
-                                <li class="list__item list__bullet__item"><a href="https://soundcloud.com/djnikkat/summa-tun-up-2014-electronic-dancehall-music-vol-1-live" target="blank" class="list__link list__bullet__link">Live Festival Set Summatime</a></li>
-                                <li class="list__item list__bullet__item"><a href="https://soundcloud.com/djnikkat/kush-and-coconut-water" target="blank" class="list__link list__bullet__link">Kush & Coconut Water</a></li>
-                                <li class="list__item list__bullet__item"><a href="https://drive.google.com/file/d/17vD0dV5QLb3_KxJLWSfliybpQoaHHQIG/view" target="blank" class="list__link list__bullet__link">Morgan Heritage "Give we a license" dub for Nikka T</a></li>
-                            </ul>
 
-                            <ul class="list list__socialmedia music__list__socialmedia">
-                                <li class="list__item list__socialmedia__item"><a href="https://soundcloud.com/djnikkat" target="blank" class="list__link list__socialmedia__link">
-                                    <svg class="list__svg list__socialmedia__svg list__socialmedia__svg--soundcloud">
-                                        <use xlink:href="img/icon-sprites.svg#icon-soundcloud"></use>
-                                    </svg>
-                                    DjNikkaT
-                                </a></li>
-                                <li class="list__item list__socialmedia__item"><a href="https://www.twitch.tv/nikka_t" target="blank" class="list__link list__socialmedia__link">
-                                    <svg class="list__svg list__socialmedia__svg list__socialmedia__svg--twitch">
-                                        <use xlink:href="img/icon-sprites.svg#icon-twitch"></use>
-                                    </svg>
-                                    Nikka__T
-                                </a></li>
-                            </ul>
                         </div>
 
-                        <div class="music__content--2">
-                            <img src="img/joseph_star_sound.png" alt="Joseph Star Sound label" class="music__content--2__img" />
+                        <div class="bands__content__side bands__content__side--2">
 
-                            <div class="logo__glow logo__music__glow">&nbsp;</div>
+                            <ul class="list list__bullet bands__list__bullet">
+                                <div class="list__section bands__list__section">
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Rebelution</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Kymani Marley</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Mr.Vegas</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">The Pharcyde</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">KRS-One</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">STS9</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">E-40</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Grizz</span>
+                                    </li>
+                                </div>
 
-                            <div class="borderbox music__borderbox">
-                                <div class="borderbox--1"></div>
-                                <div class="borderbox--2"></div>
-                            </div>
-                        </div>
+                                <div class="list__section music__list__section">
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Matisyahu</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Action Bronson</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Capleton</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Black Uhuru</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Busta Rhymes</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Gappy Ranks</span>
+                                    </li>
+                                    <li class="list__item list__bullet__item">
+                                        <span class="list__link list__bullet__link">Wu Tang Clan</span>
+                                    </li>
+                                </div>
+                            </ul>
 
-                    </div>
-
-                    <div class="music__tour" id="tour-dates">
-
-                        <h2 class="subsection__header music__header header-2">
-                            Essential World Tour 2024
-                        </h2>
-
-                        <div class="music__tour__container">
-                            <img class="music__tour__flyer" src="img/essential-world-tour_2024.jpg" alt="Dj Nikka T Essential World Tour 2023" />
                         </div>
 
                     </div>
@@ -495,10 +513,6 @@
 
             <!-- performance video section (audio terps) -->
             <section class="stream main-section">
-                <div class="skewbox skewbox-upward skewbox-upward__stream">
-                    <div class="skewbox--1 skewbox-upward--1 skewbox-upward__stream--1">&nbsp;</div>
-                    <div class="skewbox--1 skewbox-upward--2 skewbox-upward__stream--2">&nbsp;</div>
-                </div>
 
                 <div class="main-section__container" id="virtualevent">
                     <h2 class="section__header stream__header header-2">Audio Terps Feat. Nikka T</h2>

@@ -1065,6 +1065,52 @@ body {
   height: 4.5rem;
 }
 
+/** decorative bottom border **/
+.decorative-bottom-border {
+  position: relative;
+  width: 100%;
+  height: 88rem;
+  top: -99.1rem;
+  margin-bottom: -100rem;
+  z-index: 0;
+}
+.decorative-bottom-border__line {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #d0a348;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-top: 0.5rem;
+}
+.decorative-bottom-border__line, .decorative-bottom-border__line-inside--03 {
+  background-color: #d0a348;
+}
+.decorative-bottom-border__line-inside--03 {
+  height: 97.6%;
+}
+.decorative-bottom-border__line-inside, .decorative-bottom-border__line-inside--02, .decorative-bottom-border__line-inside--03, .decorative-bottom-border__line-inside--04 {
+  position: absolute;
+  width: 100%;
+  clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
+}
+.decorative-bottom-border__line-inside, .decorative-bottom-border__line-inside--02, .decorative-bottom-border__line-inside--04 {
+  background-color: #000;
+}
+.decorative-bottom-border__line-inside {
+  height: 90%;
+}
+.decorative-bottom-border__line-inside--02 {
+  height: 98.5%;
+}
+.decorative-bottom-border__line-inside--04 {
+  height: 97.3%;
+}
+.decorative-bottom-border__bookings__line {
+  clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
+}
+
 /** grids **/
 .container {
   display: grid;
@@ -1602,10 +1648,39 @@ body {
   top: -2.5%;
   z-index: 1;
   clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
-  background-color: #1e1e1e;
-  padding: 20% 0 10% 0;
+  padding: 15% 0 10% 0;
+}
+.bookings::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  background-image: url(../img/media-kit/dj-nikka-t-live-02_bg-image-gradient_large.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center right;
+}
+.bookings::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  background-color: black;
+}
+.bookings__list {
+  display: flex;
+  justify-content: space-around;
 }
 
+/** bands **/
 /** footer **/
 .footer {
   max-width: 140rem;

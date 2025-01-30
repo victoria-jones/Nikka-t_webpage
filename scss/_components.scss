@@ -1114,5 +1114,75 @@
 
 }
 
+/** decorative bottom border **/
+.decorative-bottom-border {
+    position: relative;
+    width: 100%;
+    height: 88rem;
+    top: -99.1rem;
+    margin-bottom: -100rem;
+    z-index: 0;
+
+    &__line {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: $color-primary-gold;
+
+        display:flex;
+        justify-content: center;
+        align-items: top;
+        margin-top: .5rem;
+    }
+
+    &__line,
+    &__line-inside--03 {
+        background-color: $color-primary-gold;
+    }
+
+    &__line-inside--03 {
+        height: 97.6%;
+    }
+
+    &__line-inside,
+    &__line-inside--02,
+    &__line-inside--03,
+    &__line-inside--04 {
+        position: absolute;
+        width: 100%;
+        @include arrow-up-and-down;
+    }
+
+    &__line-inside,
+    &__line-inside--02,
+    &__line-inside--04 {
+        background-color: $color-black;
+    }
+
+    &__line-inside {
+        //position: absolute;
+        //width: 100%;
+        height: 90%;
+        //background-color: $color-black;
+        //@include arrow-up-and-down;
+    }
+
+    &__line-inside--02 {
+        height: 98.5%;
+    }
+
+    &__line-inside--04 {
+        height: 97.3%;
+    }
+
+
+    &__bookings {
+        &__line {
+            //top: 1rem;
+            @include arrow-up-and-down;
+            //background-color: $color-black;
+        }
+    }
+}
 
 
