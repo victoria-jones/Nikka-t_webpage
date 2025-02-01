@@ -156,6 +156,12 @@ body {
         &__button {
             margin-bottom: 5rem;
         }
+
+        @include respond(tab-port) {
+            &__logo {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -645,6 +651,13 @@ body {
         display: flex;
         justify-content: space-around;
     }
+
+    @include respond(phone) {
+        &__list {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }
 
 /** bands **/
@@ -707,6 +720,24 @@ body {
         justify-content: center;
         gap: 8rem;
     }
+
+    @include respond(tab-port) {
+        &__content {
+            &__side {
+                &--1 {
+                    flex-grow: 0;
+                }
+            }
+        }
+    }
+
+    @include respond(phone-med) {
+        &__list {
+            flex-direction: column;
+            gap: 0;
+            align-items: center;
+        }
+    }
 }
 
 /** performance-video **/
@@ -758,6 +789,10 @@ body {
             max-width: 55rem;
         }
     }
+
+    @include respond(phone) {
+        padding: 30% 0 10% 0;
+    }
 }
 
 /** book nikka t **/
@@ -792,6 +827,10 @@ body {
         top:0;
         right: 0;
         background-color: black;
+    }
+
+    @include respond(phone) {
+        padding: 18% 0 10% 0;
     }
 }
 
@@ -845,8 +884,15 @@ body {
         margin-bottom: 5rem;
 
         &__content {
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            //flex-wrap: wrap;
             margin-top: -7rem;
+
+            &__side {
+                display: flex;
+                justify-content: center;
+            }
         }
 
         &__img {

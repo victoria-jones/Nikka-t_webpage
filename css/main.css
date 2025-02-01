@@ -1270,6 +1270,11 @@ body {
 .header__media-kit__button {
   margin-bottom: 5rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .header__media-kit__logo {
+    width: 100%;
+  }
+}
 
 /** about **/
 .about {
@@ -1685,6 +1690,12 @@ body {
   display: flex;
   justify-content: space-around;
 }
+@media only screen and (max-width: 37.5em) {
+  .bookings__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 /** bands **/
 .bands {
@@ -1740,6 +1751,18 @@ body {
   justify-content: center;
   gap: 8rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .bands__content__side--1 {
+    flex-grow: 0;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .bands__list {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+}
 
 /** performance-video **/
 .performance-video {
@@ -1787,6 +1810,11 @@ body {
 .music-streams__content__players {
   max-width: 55rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .music-streams {
+    padding: 30% 0 10% 0;
+  }
+}
 
 /** book nikka t **/
 .book-nikka-t {
@@ -1819,6 +1847,11 @@ body {
   top: 0;
   right: 0;
   background-color: black;
+}
+@media only screen and (max-width: 37.5em) {
+  .book-nikka-t {
+    padding: 18% 0 10% 0;
+  }
 }
 
 /** yours truly **/
@@ -1867,8 +1900,13 @@ body {
     margin-bottom: 5rem;
   }
   .yours-truly__content {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     margin-top: -7rem;
+  }
+  .yours-truly__content__side {
+    display: flex;
+    justify-content: center;
   }
   .yours-truly__img {
     margin-top: 12rem;
