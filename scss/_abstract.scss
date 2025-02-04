@@ -27,7 +27,32 @@ $display-font-size-large: 5.5rem;
 //font weight
 $display-font-weight: 300;
 
+/** ANIMATIONS **/
+
+@keyframes simpleRotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
 /** MIXINS **/
+
+@mixin fadeInLeftAnimation {
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+    animation: fadeInLeft 3.5s forwards; //forwards tells the element to retain the ending animation values
+}
 
 @mixin arrow-up-polygon-top {
     clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 100%, 0% 100%);
