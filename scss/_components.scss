@@ -1161,11 +1161,7 @@
     }
 
     &__line-inside {
-        //position: absolute;
-        //width: 100%;
         height: 90%;
-        //background-color: $color-black;
-        //@include arrow-up-and-down;
     }
 
     &__line-inside--02 {
@@ -1178,10 +1174,21 @@
 
 
     &__bookings {
+        height: 88rem;
         &__line {
-            //top: 1rem;
             @include arrow-up-and-down;
-            //background-color: $color-black;
+        }
+
+        @include respond(tab-port) {
+            height: 85rem;
+            top: -96rem;
+            margin-bottom: -98rem;
+        }
+
+        @include respond(phone){
+            height: 110rem;
+            top: -120rem;
+            margin-bottom: -120rem;
         }
     }
 }
@@ -1194,4 +1201,21 @@
     }
 }
 
+/** fadeup text bodies **/
+.fade-up-paragraphs {
+    &__p {
+        &--01 {
+            @include fadeupAnimation(1s);
+        }
+        &--02 {
+            @include fadeupAnimation(1.5s);
+        }
+        &--03 {
+            @include fadeupAnimation(2s);
+        }
+        &--04 {
+            @include fadeupAnimation(2.5s);
+        }
+    }
+}
 

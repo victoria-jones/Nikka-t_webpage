@@ -38,24 +38,44 @@ $display-font-weight: 300;
 @keyframes fadeInLeft {
     from {
         opacity: 0;
-        clip-path: inset(0 100% 0 0);
+        //clip-path: inset(0 100% 0 0);
     }
     to {
         opacity: 1;
-        clip-path: inset(0 0 0 0);
+        //clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes fadeup {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 /** MIXINS **/
 
+@mixin fadeupAnimation($delay) {
+    opacity: 0;
+    transform: translateY(-1rem);
+    animation-delay: $delay;
+    animation-timing-function: ease-out;
+    animation: fadeup 2s $delay ease-out forwards;
+}
+
 @mixin fadeInLeftAnimation {
     animation-delay: 2s;
     animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-    animation: fadeInLeft 3.5s forwards; //forwards tells the element to retain the ending animation values
+    animation: fadeInLeft 3.5s .5s cubic-bezier(0.61, 1, 0.88, 1) forwards; //forwards tells the element to retain the ending animation values
 }
 
 @mixin arrow-up-polygon-top {
     clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 100%, 0% 100%);
+
 }
 
 @mixin arrow-up-polygon-bottom {
@@ -64,6 +84,10 @@ $display-font-weight: 300;
 
 @mixin arrow-up-and-down {
     clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
+
+    @include respond(phone) {
+        clip-path: polygon(0% 5%, 50% 0, 100% 5%, 100% 50%, 100% 95%, 50% 100%, 0% 95%);
+    }
 }
 
 @mixin arrow-down-polygon-top {
@@ -72,6 +96,10 @@ $display-font-weight: 300;
 
 @mixin arrow-down-polygon-bottom {
     clip-path: polygon(0% 0, 50% 0, 100% 0, 100% 90%, 50% 100%, 0% 90%);
+
+    @include respond(phone) {
+        clip-path: polygon(0% 0, 50% 0, 100% 0, 100% 95%, 50% 100%, 0% 95%);
+    }
 }
 
 @mixin hover-glow {

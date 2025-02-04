@@ -23,11 +23,19 @@ Date Last Modified: 8/30/2023
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    clip-path: inset(0 100% 0 0);
   }
   to {
     opacity: 1;
-    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /** MIXINS **/
@@ -1106,6 +1114,11 @@ body {
   width: 100%;
   clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
 }
+@media only screen and (max-width: 37.5em) {
+  .decorative-bottom-border__line-inside, .decorative-bottom-border__line-inside--02, .decorative-bottom-border__line-inside--03, .decorative-bottom-border__line-inside--04 {
+    clip-path: polygon(0% 5%, 50% 0, 100% 5%, 100% 50%, 100% 95%, 50% 100%, 0% 95%);
+  }
+}
 .decorative-bottom-border__line-inside, .decorative-bottom-border__line-inside--02, .decorative-bottom-border__line-inside--04 {
   background-color: #000;
 }
@@ -1118,13 +1131,65 @@ body {
 .decorative-bottom-border__line-inside--04 {
   height: 97.3%;
 }
+.decorative-bottom-border__bookings {
+  height: 88rem;
+}
 .decorative-bottom-border__bookings__line {
   clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
+}
+@media only screen and (max-width: 37.5em) {
+  .decorative-bottom-border__bookings__line {
+    clip-path: polygon(0% 5%, 50% 0, 100% 5%, 100% 50%, 100% 95%, 50% 100%, 0% 95%);
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .decorative-bottom-border__bookings {
+    height: 85rem;
+    top: -96rem;
+    margin-bottom: -98rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .decorative-bottom-border__bookings {
+    height: 110rem;
+    top: -120rem;
+    margin-bottom: -120rem;
+  }
 }
 
 /** soundcloud-player **/
 .soundcloud-player:not(:last-child) {
   margin: 0 0 2rem 0;
+}
+
+/** fadeup text bodies **/
+.fade-up-paragraphs__p--01 {
+  opacity: 0;
+  transform: translateY(-1rem);
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+  animation: fadeup 2s 1s ease-out forwards;
+}
+.fade-up-paragraphs__p--02 {
+  opacity: 0;
+  transform: translateY(-1rem);
+  animation-delay: 1.5s;
+  animation-timing-function: ease-out;
+  animation: fadeup 2s 1.5s ease-out forwards;
+}
+.fade-up-paragraphs__p--03 {
+  opacity: 0;
+  transform: translateY(-1rem);
+  animation-delay: 2s;
+  animation-timing-function: ease-out;
+  animation: fadeup 2s 2s ease-out forwards;
+}
+.fade-up-paragraphs__p--04 {
+  opacity: 0;
+  transform: translateY(-1rem);
+  animation-delay: 2.5s;
+  animation-timing-function: ease-out;
+  animation: fadeup 2s 2.5s ease-out forwards;
 }
 
 /** grids **/
@@ -1681,9 +1746,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*&__logo {
-      margin: 20rem 0 0 0;
-  }*/
 }
 .media-kit-header::before {
   content: "";
@@ -1748,9 +1810,10 @@ body {
   position: absolute;
 }
 .media-kit-header__logo--top {
+  opacity: 0;
   animation-delay: 2s;
   animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-  animation: fadeInLeft 3.5s forwards;
+  animation: fadeInLeft 3.5s 0.5s cubic-bezier(0.61, 1, 0.88, 1) forwards;
 }
 .media-kit-header__button {
   margin-bottom: 5rem;
@@ -1758,6 +1821,9 @@ body {
 @media only screen and (max-width: 56.25em) {
   .media-kit-header__logo {
     width: 100%;
+  }
+  .media-kit-header__logo-wrapper {
+    margin: 10rem 0 0 0;
   }
   .media-kit-header__content {
     padding: 0 0 30% 0;
@@ -1776,6 +1842,11 @@ body {
   z-index: 2;
   clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
   padding: 15% 0 10% 0;
+}
+@media only screen and (max-width: 37.5em) {
+  .bookings {
+    clip-path: polygon(0% 5%, 50% 0, 100% 5%, 100% 50%, 100% 95%, 50% 100%, 0% 95%);
+  }
 }
 .bookings::before {
   content: "";
@@ -1806,18 +1877,34 @@ body {
   display: flex;
   justify-content: space-around;
 }
+@media only screen and (max-width: 56.25em) {
+  .bookings::before {
+    background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: top right;
+  }
+  .bookings__list__link {
+    filter: drop-shadow(0 0 0.75rem #000);
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .bookings {
-    padding: 30% 0 10% 0;
+    padding: 25% 0 10% 0;
+  }
+  .bookings__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .bookings__list {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
   }
 }
 @media only screen and (max-width: 30em) {
   .bookings {
-    padding: 40% 0 10% 0;
+    padding: 30% 0 10% 0;
   }
 }
 
@@ -1828,6 +1915,11 @@ body {
   z-index: 0;
   padding: 7% 0 0% 0;
   clip-path: polygon(0% 0, 50% 0, 100% 0, 100% 90%, 50% 100%, 0% 90%);
+}
+@media only screen and (max-width: 37.5em) {
+  .bands {
+    clip-path: polygon(0% 0, 50% 0, 100% 0, 100% 95%, 50% 100%, 0% 95%);
+  }
 }
 .bands::before {
   content: "";
@@ -1852,7 +1944,7 @@ body {
   z-index: -2;
   top: 0;
   right: 0;
-  background-color: black;
+  background-color: #000;
 }
 .bands__content {
   display: flex;
@@ -1876,6 +1968,15 @@ body {
   gap: 8rem;
 }
 @media only screen and (max-width: 56.25em) {
+  .bands__list {
+    background-image: radial-gradient(#000, transparent 72%);
+  }
+  .bands::before {
+    background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med_02.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: bottom left;
+  }
   .bands__content__side--1 {
     flex-grow: 0;
   }
@@ -1917,6 +2018,11 @@ body {
   clip-path: polygon(0% 10%, 50% 0, 100% 10%, 100% 50%, 100% 90%, 50% 100%, 0% 90%);
   padding: 20% 0 10% 0;
 }
+@media only screen and (max-width: 37.5em) {
+  .music-streams {
+    clip-path: polygon(0% 5%, 50% 0, 100% 5%, 100% 50%, 100% 95%, 50% 100%, 0% 95%);
+  }
+}
 .music-streams::before {
   content: "";
   width: 100%;
@@ -1950,14 +2056,22 @@ body {
 .music-streams__content__players {
   max-width: 55rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .music-streams::before {
+    background-image: url(../img/media-kit/dj-nikka-t-smoke-colorful_bg-image-gradient_med.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: top left;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .music-streams {
-    padding: 30% 0 10% 0;
+    padding: 25% 0 10% 0;
   }
 }
 @media only screen and (max-width: 30em) {
   .music-streams {
-    padding: 40% 0 10% 0;
+    padding: 30% 0 10% 0;
   }
 }
 
@@ -1996,6 +2110,14 @@ body {
 @media only screen and (max-width: 37.5em) {
   .book-nikka-t {
     padding: 18% 0 10% 0;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .book-nikka-t {
+    padding: 25% 0 10% 0;
+  }
+  .book-nikka-t__content {
+    padding-top: 5rem;
   }
 }
 
