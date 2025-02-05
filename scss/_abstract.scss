@@ -35,7 +35,7 @@ $display-font-weight: 300;
     }
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeIn {
     from {
         opacity: 0;
         //clip-path: inset(0 100% 0 0);
@@ -57,6 +57,17 @@ $display-font-weight: 300;
     }
 }
 
+@keyframes slideToLeft {
+    from {
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /** MIXINS **/
 
 @mixin fadeupAnimation($delay) {
@@ -67,10 +78,15 @@ $display-font-weight: 300;
     animation: fadeup 2s $delay ease-out forwards;
 }
 
-@mixin fadeInLeftAnimation {
-    animation-delay: 2s;
+@mixin fadeInAnimation {
+    //animation-delay: 1s;
     animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-    animation: fadeInLeft 3.5s .5s cubic-bezier(0.61, 1, 0.88, 1) forwards; //forwards tells the element to retain the ending animation values
+    animation: fadeIn 3.5s .5s cubic-bezier(0.61, 1, 0.88, 1) forwards; //forwards tells the element to retain the ending animation values
+}
+
+@mixin slideToLeftAnimation($delay) {
+
+    animation: slideToLeft 2s $delay cubic-bezier(0.61, 1, 0.88, 1) forwards;
 }
 
 @mixin arrow-up-polygon-top {

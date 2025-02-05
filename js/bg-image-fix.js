@@ -10,11 +10,8 @@ window.addEventListener('scroll', ()=> {
     const scrollPosition = window.scrollY;
 
     if(scrollPosition > headerHeight) {
-        console.log('scrolled past the header');
         header.style.zIndex = -100;
-
     } else {
-        console.log('above the header');
         header.style.zIndex = 0;
     }
-})
+});

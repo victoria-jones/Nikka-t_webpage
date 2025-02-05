@@ -1181,13 +1181,13 @@
 
         @include respond(tab-port) {
             height: 85rem;
-            top: -96rem;
+            top: -95rem;
             margin-bottom: -98rem;
         }
 
         @include respond(phone){
             height: 110rem;
-            top: -120rem;
+            top: -118rem;
             margin-bottom: -120rem;
         }
     }
@@ -1219,3 +1219,12 @@
     }
 }
 
+/** slide in text bodies (to left) **/
+.slide-in-body {
+    &--01 {
+        @include slideToLeftAnimation(.2s);
+    }
+    &--02 {
+        @include slideToLeftAnimation(.5s);
+    }
+}

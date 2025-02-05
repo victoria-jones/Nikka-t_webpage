@@ -20,7 +20,7 @@ Date Last Modified: 8/30/2023
     transform: rotate(360deg);
   }
 }
-@keyframes fadeInLeft {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -36,6 +36,16 @@ Date Last Modified: 8/30/2023
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes slideToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 /** MIXINS **/
@@ -1145,14 +1155,14 @@ body {
 @media only screen and (max-width: 56.25em) {
   .decorative-bottom-border__bookings {
     height: 85rem;
-    top: -96rem;
+    top: -95rem;
     margin-bottom: -98rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .decorative-bottom-border__bookings {
     height: 110rem;
-    top: -120rem;
+    top: -118rem;
     margin-bottom: -120rem;
   }
 }
@@ -1190,6 +1200,14 @@ body {
   animation-delay: 2.5s;
   animation-timing-function: ease-out;
   animation: fadeup 2s 2.5s ease-out forwards;
+}
+
+/** slide in text bodies (to left) **/
+.slide-in-body--01 {
+  animation: slideToLeft 2s 0.2s cubic-bezier(0.61, 1, 0.88, 1) forwards;
+}
+.slide-in-body--02 {
+  animation: slideToLeft 2s 0.5s cubic-bezier(0.61, 1, 0.88, 1) forwards;
 }
 
 /** grids **/
@@ -1811,9 +1829,8 @@ body {
 }
 .media-kit-header__logo--top {
   opacity: 0;
-  animation-delay: 2s;
   animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-  animation: fadeInLeft 3.5s 0.5s cubic-bezier(0.61, 1, 0.88, 1) forwards;
+  animation: fadeIn 3.5s 0.5s cubic-bezier(0.61, 1, 0.88, 1) forwards;
 }
 .media-kit-header__button {
   margin-bottom: 5rem;
@@ -1877,9 +1894,13 @@ body {
   display: flex;
   justify-content: space-around;
 }
+.bookings__list__section {
+  opacity: 0;
+  transform: translateX(5rem);
+}
 @media only screen and (max-width: 56.25em) {
   .bookings::before {
-    background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med.jpg);
+    background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med_06.jpg);
     background-repeat: no-repeat;
     background-size: auto 80%;
     background-position: top right;
@@ -1972,7 +1993,7 @@ body {
     background-image: radial-gradient(#000, transparent 72%);
   }
   .bands::before {
-    background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med_02.jpg);
+    background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med_05.jpg);
     background-repeat: no-repeat;
     background-size: auto 80%;
     background-position: bottom left;
@@ -1987,6 +2008,9 @@ body {
   }
 }
 @media only screen and (max-width: 30em) {
+  .bands {
+    padding: 22% 0 0 0;
+  }
   .bands__list {
     flex-direction: column;
     gap: 0;
@@ -2060,7 +2084,7 @@ body {
   .music-streams::before {
     background-image: url(../img/media-kit/dj-nikka-t-smoke-colorful_bg-image-gradient_med.jpg);
     background-repeat: no-repeat;
-    background-size: auto 80%;
+    background-size: auto 100%;
     background-position: top left;
   }
 }
@@ -2106,6 +2130,14 @@ body {
   top: 0;
   right: 0;
   background-color: black;
+}
+@media only screen and (max-width: 56.25em) {
+  .book-nikka-t::before {
+    background-image: url(../img/media-kit/dj-nikka-t-live_bg-image-gradient_med.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center right;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   .book-nikka-t {
@@ -2173,14 +2205,17 @@ body {
   .yours-truly__content {
     flex-direction: column;
     align-items: center;
-    margin-top: -7rem;
+    margin-top: -13rem;
   }
   .yours-truly__content__side {
     display: flex;
     justify-content: center;
   }
   .yours-truly__img {
+    position: relative;
+    z-index: -1;
     margin-top: 12rem;
+    margin-top: 0;
     margin-right: auto;
     margin-left: auto;
   }
@@ -2204,8 +2239,7 @@ body {
     margin-top: -13rem;
   }
   .yours-truly__img {
-    margin-top: 8rem;
-    margin-bottom: 5rem;
+    margin-bottom: -2rem;
   }
   .yours-truly__img-borderbox {
     width: 22rem;
@@ -2213,9 +2247,6 @@ body {
   }
 }
 @media only screen and (max-width: 18.75em) {
-  .yours-truly__img {
-    margin-bottom: 3rem;
-  }
   .yours-truly__img-borderbox {
     width: 17rem;
     height: 17rem;

@@ -622,8 +622,6 @@ body {
     justify-content: center;
     align-items: center;
 
-    //background-color: $color-black;
-
     &::before {
         content: "";
         width: 100%;
@@ -694,7 +692,7 @@ body {
 
         &--top {
             opacity: 0;
-            @include fadeInLeftAnimation;
+            @include fadeInAnimation;
         }
     }
 
@@ -759,19 +757,18 @@ body {
     &__list{
         display: flex;
         justify-content: space-around;
+
+        &__section {
+            //@include slideToLeftAnimation(.2s);
+            //staring animation point
+            opacity: 0;
+            transform: translateX(5rem);
+        }
     }
 
     @include respond(tab-port) {
         &::before {
-            //content: "";
-            //width: 100%;
-            //height: 100%;
-            //display: block;
-            //position: absolute;
-            //z-index: -1;
-            //top:0;
-            //right: 0;
-            background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med.jpg);
+            background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med_06.jpg);
             background-repeat: no-repeat;
             background-size: auto 80%;
             background-position: top right;
@@ -868,7 +865,7 @@ body {
         }
 
         &::before {
-            background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med_02.jpg);
+            background-image: url(../img/media-kit/dj-nikka-t-live-bg-image-gradient-med_05.jpg);
             background-repeat: no-repeat;
             background-size: auto 80%;
             background-position: bottom left;
@@ -888,6 +885,8 @@ body {
     }
 
     @include respond(phone-med) {
+        padding: 22% 0 0 0;
+
         &__list {
             flex-direction: column;
             gap: 0;
@@ -960,7 +959,7 @@ body {
         &::before {
             background-image: url(../img/media-kit/dj-nikka-t-smoke-colorful_bg-image-gradient_med.jpg);
             background-repeat: no-repeat;
-            background-size: auto 80%;
+            background-size: auto 100%;
             background-position: top left;
         }
     }
@@ -1007,6 +1006,14 @@ body {
         background-color: black;
     }
 
+    @include respond (tab-port) {
+        &::before {
+            background-image: url(../img/media-kit/dj-nikka-t-live_bg-image-gradient_med.jpg);
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: center right;
+        }
+    }
     @include respond(phone) {
         padding: 18% 0 10% 0;
     }
@@ -1077,7 +1084,7 @@ body {
             flex-direction: column;
             align-items: center;
             //flex-wrap: wrap;
-            margin-top: -7rem;
+            margin-top: -13rem;
 
             &__side {
                 display: flex;
@@ -1086,7 +1093,10 @@ body {
         }
 
         &__img {
+            position: relative;
+            z-index: -1;
             margin-top: 12rem;
+            margin-top: 0;
             margin-right: auto;
             margin-left: auto;
 
@@ -1114,8 +1124,8 @@ body {
         }
 
         &__img {
-            margin-top: 8rem;
-            margin-bottom: 5rem;
+            //margin-top: 8rem;
+            margin-bottom: -2rem;
         }
 
         &__img-borderbox {
@@ -1126,7 +1136,7 @@ body {
 
     @include respond(phone-small) {
         &__img {
-            margin-bottom: 3rem;
+            //margin-bottom: 3rem;
         }
         &__img-borderbox {
             width: 17rem;
