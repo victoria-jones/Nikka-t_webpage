@@ -48,6 +48,16 @@ Date Last Modified: 8/30/2023
     transform: translateX(0);
   }
 }
+@keyframes slideToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /** MIXINS **/
 /* MEDIA QUERIES */
 /***********
@@ -1210,6 +1220,23 @@ body {
   animation: slideToLeft 2s 0.5s cubic-bezier(0.61, 1, 0.88, 1) forwards;
 }
 
+/** slide in text bodies (to right) **/
+.slide-in-body__right--01 {
+  animation: slideToRight 2s 0.2s cubic-bezier(0.61, 1, 0.88, 1) forwards;
+}
+.slide-in-body__right--02 {
+  animation: slideToRight 2s 0.5s cubic-bezier(0.61, 1, 0.88, 1) forwards;
+}
+
+/** slide up bodies **/
+.slide-up--01 {
+  opacity: 0;
+  transform: translateY(-1rem);
+  animation-delay: 0.2s;
+  animation-timing-function: ease-out;
+  animation: fadeup 2s 0.2s ease-out forwards;
+}
+
 /** grids **/
 .container {
   display: grid;
@@ -1257,6 +1284,9 @@ body {
   background-color: #1e1e1e;
 }
 
+.main-section {
+  overflow-x: hidden;
+}
 .main-section__container {
   position: relative;
   margin: 0 auto;
@@ -1988,6 +2018,10 @@ body {
   justify-content: center;
   gap: 8rem;
 }
+.bands__list__section {
+  opacity: 0;
+  transform: translateX(-5rem);
+}
 @media only screen and (max-width: 56.25em) {
   .bands__list {
     background-image: radial-gradient(#000, transparent 72%);
@@ -2020,7 +2054,7 @@ body {
 
 /** performance-video **/
 .performance-video {
-  padding: 0 0 12% 0;
+  padding: 5% 0 15% 0;
   margin-top: -5rem;
 }
 @media only screen and (max-width: 56.25em) {
@@ -2078,6 +2112,8 @@ body {
   align-items: center;
 }
 .music-streams__content__players {
+  opacity: 0;
+  transform: translateY(2rem);
   max-width: 55rem;
 }
 @media only screen and (max-width: 56.25em) {
@@ -2105,6 +2141,10 @@ body {
   top: -5%;
   z-index: 1;
   padding: 10% 0 10% 0;
+}
+.book-nikka-t__list {
+  opacity: 0;
+  transform: translateX(5rem);
 }
 .book-nikka-t::before {
   content: "";
@@ -2158,6 +2198,7 @@ body {
   position: relative;
   top: -5%;
   z-index: 1;
+  overflow: visible;
   background-color: #000;
   padding: 5rem 0;
   margin-bottom: 10rem;

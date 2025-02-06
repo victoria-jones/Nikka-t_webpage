@@ -68,6 +68,17 @@ $display-font-weight: 300;
     }
 }
 
+@keyframes slideToRight {
+    from {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /** MIXINS **/
 
 @mixin fadeupAnimation($delay) {
@@ -85,8 +96,11 @@ $display-font-weight: 300;
 }
 
 @mixin slideToLeftAnimation($delay) {
-
     animation: slideToLeft 2s $delay cubic-bezier(0.61, 1, 0.88, 1) forwards;
+}
+
+@mixin slideToRightAnimation($delay) {
+    animation: slideToRight 2s $delay cubic-bezier(0.61, 1, 0.88, 1) forwards;
 }
 
 @mixin arrow-up-polygon-top {

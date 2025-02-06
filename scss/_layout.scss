@@ -47,6 +47,7 @@ body {
 }
 
 .main-section {
+    overflow-x: hidden;
     &__container {
         position: relative;
         margin: 0 auto;
@@ -857,6 +858,13 @@ body {
         display: flex;
         justify-content: center;
         gap: 8rem;
+
+        &__section {
+            //@include slideToLeftAnimation(.2s);
+            //staring animation point
+            opacity: 0;
+            transform: translateX(-5rem);
+        }
     }
 
     @include respond(tab-port) {
@@ -897,7 +905,7 @@ body {
 
 /** performance-video **/
 .performance-video {
-    padding: 0 0 12% 0;
+    padding: 5% 0 15% 0;
     margin-top: -5rem;
 
     //background-color: $color-grey-dark;
@@ -951,6 +959,8 @@ body {
         align-items: center;
 
         &__players {
+            opacity: 0;
+            transform: translateY(2rem);
             max-width: 55rem;
         }
     }
@@ -978,6 +988,11 @@ body {
     top: -5%;
     z-index: 1;
     padding: 10% 0 10% 0;
+
+    &__list {
+        opacity: 0;
+        transform: translateX(5rem);
+    }
 
     &::before {
         content: "";
@@ -1031,6 +1046,7 @@ body {
     position: relative;
     top: -5%;
     z-index: 1;
+    overflow: visible;
 
     background-color: $color-black;
     padding: 5rem 0;

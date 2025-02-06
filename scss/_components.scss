@@ -1228,3 +1228,20 @@
         @include slideToLeftAnimation(.5s);
     }
 }
+
+/** slide in text bodies (to right) **/
+.slide-in-body__right {
+    &--01 {
+        @include slideToRightAnimation(.2s);
+    }
+    &--02 {
+        @include slideToRightAnimation(.5s);
+    }
+}
+
+/** slide up bodies **/
+.slide-up {
+    &--01 {
+        @include fadeupAnimation(.2s);
+    }
+}
