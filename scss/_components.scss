@@ -267,6 +267,7 @@
     position: relative;
     z-index: 1;
     margin-top: 2rem;
+    height: 15rem;
 
     &__logo {
         position: relative;
@@ -734,7 +735,8 @@
     }
 }
 
-.contact__img-borderbox {
+.contact__img-borderbox,
+.yours-truly__image-borderbox {
     &--2 {
         background-color: $color-black;
     }
@@ -1113,5 +1115,133 @@
 
 }
 
+/** decorative bottom border **/
+.decorative-bottom-border {
+    position: relative;
+    width: 100%;
+    height: 88rem;
+    top: -99.1rem;
+    margin-bottom: -100rem;
+    z-index: 1;
+
+    &__line {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: $color-primary-gold;
+
+        display:flex;
+        justify-content: center;
+        align-items: top;
+        margin-top: .5rem;
+    }
+
+    &__line,
+    &__line-inside--03 {
+        background-color: $color-primary-gold;
+    }
+
+    &__line-inside--03 {
+        height: 97.6%;
+    }
+
+    &__line-inside,
+    &__line-inside--02,
+    &__line-inside--03,
+    &__line-inside--04 {
+        position: absolute;
+        width: 100%;
+        @include arrow-up-and-down;
+    }
+
+    &__line-inside,
+    &__line-inside--02,
+    &__line-inside--04 {
+        background-color: $color-black;
+    }
+
+    &__line-inside {
+        height: 90%;
+    }
+
+    &__line-inside--02 {
+        height: 98.5%;
+    }
+
+    &__line-inside--04 {
+        height: 97.3%;
+    }
 
 
+    &__bookings {
+        height: 88rem;
+        &__line {
+            @include arrow-up-and-down;
+        }
+
+        @include respond(tab-port) {
+            height: 85rem;
+            top: -95rem;
+            margin-bottom: -98rem;
+        }
+
+        @include respond(phone){
+            height: 110rem;
+            top: -118rem;
+            margin-bottom: -120rem;
+        }
+    }
+}
+
+/** soundcloud-player **/
+.soundcloud-player {
+
+    &:not(:last-child) {
+        margin: 0 0 2rem 0;
+    }
+}
+
+/** fadeup text bodies **/
+.fade-up-paragraphs {
+    &__p {
+        &--01 {
+            @include fadeupAnimation(1s);
+        }
+        &--02 {
+            @include fadeupAnimation(1.5s);
+        }
+        &--03 {
+            @include fadeupAnimation(2s);
+        }
+        &--04 {
+            @include fadeupAnimation(2.5s);
+        }
+    }
+}
+
+/** slide in text bodies (to left) **/
+.slide-in-body {
+    &--01 {
+        @include slideToLeftAnimation(.2s);
+    }
+    &--02 {
+        @include slideToLeftAnimation(.5s);
+    }
+}
+
+/** slide in text bodies (to right) **/
+.slide-in-body__right {
+    &--01 {
+        @include slideToRightAnimation(.2s);
+    }
+    &--02 {
+        @include slideToRightAnimation(.5s);
+    }
+}
+
+/** slide up bodies **/
+.slide-up {
+    &--01 {
+        @include fadeupAnimation(.2s);
+    }
+}
