@@ -1284,9 +1284,6 @@ body {
   background-color: #1e1e1e;
 }
 
-.main-section {
-  overflow-x: hidden;
-}
 .main-section__container {
   position: relative;
   margin: 0 auto;
@@ -1298,6 +1295,9 @@ body {
     padding-right: 2rem;
     padding-left: 2rem;
   }
+}
+.main-section__media-kit {
+  overflow-x: hidden;
 }
 
 .section__header {

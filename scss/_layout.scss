@@ -47,7 +47,7 @@ body {
 }
 
 .main-section {
-    overflow-x: hidden;
+
     &__container {
         position: relative;
         margin: 0 auto;
@@ -58,6 +58,10 @@ body {
             padding-right: 2rem;
             padding-left: 2rem;
         }
+    }
+
+    &__media-kit {
+        overflow-x: hidden;
     }
 }
 
