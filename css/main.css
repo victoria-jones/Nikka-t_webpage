@@ -1794,6 +1794,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /*&__bg-img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      position: fixed;
+      z-index: -2;
+      top:0;
+      right: 0;
+      background-image: url(../img/media-kit/dj-nikka-t_hero-image-gradient_large.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top center;
+  }*/
 }
 .media-kit-header::before {
   content: "";
@@ -1803,19 +1816,6 @@ body {
   position: absolute;
   position: fixed;
   z-index: -1;
-  top: 0;
-  right: 0;
-  background-image: url(../img/media-kit/dj-nikka-t_hero-image-gradient_large.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top center;
-}
-.media-kit-header__bg-img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  position: fixed;
-  z-index: -2;
   top: 0;
   right: 0;
   background-image: url(../img/media-kit/dj-nikka-t_hero-image-gradient_large.jpg);
