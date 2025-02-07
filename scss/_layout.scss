@@ -760,8 +760,6 @@ body {
         justify-content: space-around;
 
         &__section {
-            //@include slideToLeftAnimation(.2s);
-            //staring animation point
             opacity: 0;
             transform: translateX(5rem);
         }
@@ -860,8 +858,6 @@ body {
         gap: 8rem;
 
         &__section {
-            //@include slideToLeftAnimation(.2s);
-            //staring animation point
             opacity: 0;
             transform: translateX(-5rem);
         }
