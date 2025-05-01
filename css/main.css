@@ -2311,23 +2311,14 @@ body {
   justify-content: center;
   margin: 5rem 0;
 }
+.footer__affiliates__img-holder {
+  align-self: center;
+}
 .footer__affiliates__img {
   max-width: 15rem;
   opacity: 0.4;
-  align-self: center;
   margin: 2rem 2.5rem;
 }
-@media only screen and (max-width: 30em) {
-  .footer__affiliates__img {
-    width: 25%;
-  }
-}
-@media only screen and (max-width: 18.75em) {
-  .footer__affiliates__img {
-    width: 40%;
-  }
-}
-
 .logo__footer {
   position: relative;
   z-index: -1;

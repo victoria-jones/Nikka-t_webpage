@@ -1178,10 +1178,14 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         margin: 5rem 0;
+        &__img-holder {
+            align-self: center;
+            //margin: 2rem 2.5rem;
+        }
         &__img {
             max-width: 15rem;
             opacity: .4;
-            align-self: center;
+            //align-self: center;
             margin: 2rem 2.5rem;
         }
     }
@@ -1189,7 +1193,7 @@ body {
     @include respond(phone-med) {
         &__affiliates {
             &__img {
-                width: 25%;
+                //width: 45%;
             }
         }
     }
@@ -1197,7 +1201,7 @@ body {
     @include respond(phone-small) {
         &__affiliates {
             &__img {
-                width: 40%;
+                //width: 90%;
             }
         }
     }
