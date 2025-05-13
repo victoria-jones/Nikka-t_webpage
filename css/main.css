@@ -803,6 +803,9 @@ body {
   height: 145%;
   transform: rotate(-45deg);
 }
+.img-borderbox--black-bg .img-borderbox--2, .img-borderbox--black-bg .img-borderbox--3 {
+  background-color: #000;
+}
 
 .stream__img-borderbox--imgholder {
   background-color: #1e1e1e;
@@ -1296,6 +1299,13 @@ body {
     padding-left: 2rem;
   }
 }
+@media only screen and (max-width: 30em) {
+  .main-section__container--padding-fix {
+    padding: 0;
+    margin-bottom: -8rem;
+    margin-top: 0 !important;
+  }
+}
 .main-section__media-kit {
   overflow-x: hidden;
 }
@@ -1542,6 +1552,16 @@ body {
   }
 }
 @media only screen and (max-width: 56.25em) {
+  .music--video__container {
+    padding-top: 20rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .music--video__container {
+    padding-top: 30rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
   .music__header {
     margin-top: 5rem;
     margin-bottom: -2rem;
@@ -1666,6 +1686,9 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.stream-embed video {
+  width: 100%;
 }
 
 @media only screen and (max-width: 87.5em) {
@@ -2065,6 +2088,14 @@ body {
 @media only screen and (max-width: 37.5em) {
   .performance-video {
     padding: 0 0 25% 0;
+  }
+}
+.performance-video__container:not(:first-child) {
+  margin-top: 10rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .performance-video__container:not(:first-child) {
+    margin-top: 5rem;
   }
 }
 

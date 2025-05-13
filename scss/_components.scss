@@ -727,6 +727,11 @@
         transform: rotate(-45deg);
     }
 
+    &--black-bg  .img-borderbox--2,
+    &--black-bg .img-borderbox--3 {
+        background-color: $color-black;
+    }
+
 }
 
 .stream__img-borderbox {
