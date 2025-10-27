@@ -1471,6 +1471,14 @@ body {
     margin-bottom: -20rem;
   }
 }
+.about__more-streams {
+  margin: 18rem 10rem 0 10rem;
+}
+@media only screen and (max-width: 30em) {
+  .about__more-streams {
+    margin: 18rem 0 0 0;
+  }
+}
 @media only screen and (max-width: 75em) {
   .about {
     margin-bottom: 10rem;

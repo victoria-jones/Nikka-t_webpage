@@ -235,6 +235,14 @@ body {
         }
     }
 
+    &__more-streams {
+        //margin-top: 18rem;
+        margin: 18rem 10rem 0 10rem;
+        @include respond(phone-med){
+            margin: 18rem 0 0 0;
+        }
+    }
+
     @include respond(tab-land) {
         margin-bottom: 10rem;
 
